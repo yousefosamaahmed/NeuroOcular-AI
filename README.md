@@ -1,374 +1,234 @@
+README_NeuroOcular_AI_Clean_Navigation.md
+
+
 <a id="top"></a>
 
-<div align="center">
-
 🩺 NeuroOcular AI
-
 Physics-Informed Retinal Hemodynamics Platform
+<p align="center"> <b>Retinal Computer Vision × Hemodynamics × Physics-Informed AI × Edge Inference</b> </p>
 
-Retinal Computer Vision × Hemodynamics × Physics-Informed AI × Edge Inference
+<p align="center"> <img src="https://img.shields.io/badge/Status-Research%20Prototype-yellow" /> <img src="https://img.shields.io/badge/Interface-Streamlit-FF4B4B" /> <img src="https://img.shields.io/badge/Vision-OpenCV-5C3EE8" /> <img src="https://img.shields.io/badge/Inference-ONNX%20Runtime-005CED" /> <img src="https://img.shields.io/badge/Model%20Size-10.28%20KB-success" /> <img src="https://img.shields.io/badge/Target%20Latency-%3C5ms-orange" /> <img src="https://img.shields.io/badge/License-MIT-green" /> </p>
 
-<br>
-
-
-
-
-
-
-
-
+NeuroOcular AI is a research-oriented medical computer vision platform that analyzes retinal microvascular video to extract flow-related biomarkers, estimate physiological variables, and detect localized pre-occlusive flow abnormalities using a combination of dense optical flow, hemodynamic modeling, spatio-temporal anomaly detection, and lightweight ONNX inference.
 
 <br>
 
-A research-oriented medical computer vision platform for retinal microvascular flow analysis, hemodynamic feature extraction, physiological estimation, and localized pre-occlusive flow anomaly detection.
-
-</div>
-
-🔎 Project at a Glance
-
-Area
-
-Implementation
-
-Primary Input
-
-Retinal microvascular video
-
-Vision Engine
-
-OpenCV
-
-Motion Estimation
-
-Gunnar Farneback Dense Optical Flow
-
-ROI Extraction
-
-Cumulative Motion Masking
-
-Hemodynamic Features
-
-Velocity, variance, shear-related metrics, stagnation, pulsatility
-
-Anomaly Detection
-
-Spatio-temporal baseline + Z-score analysis
-
-AI Model
-
-NeuroOcularNet
-
-Model Format
-
-ONNX
-
-Runtime
-
-ONNX Runtime
-
-Web Interface
-
-Streamlit
-
-Primary Outputs
-
-Glucose estimate, viscosity estimate, localized flow anomaly
-
-Project Stage
-
-Research prototype
-
-<div align="center">
-
-⚠️ Medical & Research Disclaimer
-
-Research Use Only — Not a Clinically Validated Medical Device
-
-</div>
+<h2 align="center">⚠️ Medical & Research Disclaimer</h2> <p align="center"><b>Research Use Only • Not a Clinically Validated Medical Device</b></p>
 
 NeuroOcular AI is an experimental research prototype intended for academic research, engineering validation, and technical demonstration.
 
 It must not be used as a substitute for:
 
-laboratory blood glucose measurement,
+Laboratory blood glucose measurement
 
-certified continuous glucose monitoring,
+Certified continuous glucose monitoring
 
-vascular imaging,
+Vascular imaging
 
-physician diagnosis,
+Physician diagnosis
 
-emergency assessment,
+Emergency medical assessment
 
-anticoagulation decisions,
+Anticoagulation decisions
 
-or any medical treatment decision.
+Any other treatment or clinical decision
 
-Clinical translation requirement: A deployable clinical system would require prospective human studies, synchronized ground-truth measurements, independent external validation, safety testing, demographic robustness evaluation, and regulatory approval.
+Clinical Translation Requirement:
+A deployable clinical system would require prospective human studies, synchronized ground-truth measurements, independent external validation, safety testing, demographic robustness evaluation, and appropriate regulatory approval.
 
-<div align="center">
+<br>
 
-📑 Table of Contents
+<h2 align="center">📑 Table of Contents</h2> <p align="center"><b>Follow the project from concept → algorithms → AI → deployment → validation.</b></p>
 
-Structured Technical Documentation
+🧭 Reading Map
+Chapter	Focus	Sections
+I. System Foundation	What the project is, why it exists, and how it works	1–6
+II. Vision, Flow & Physics	Algorithms that extract and interpret retinal blood-flow dynamics	7–12
+III. AI & Inference	NeuroOcularNet, features, training, ONNX, and application layer	13–17
+IV. Engineering & Evaluation	Stack, repository, scenarios, results, and metrics	18–22
+V. Run & Use the Platform	Installation, execution, deployment, inputs, and outputs	23–27
+VI. Validation & Next Steps	Limitations, clinical roadmap, future work, security, and project metadata	28–35
+<br>
 
-</div>
-
-Core System
-
-Algorithms & AI
-
-Engineering & Validation
+<details open> <summary><b>📌 Chapter I — System Foundation</b></summary>
 
 1. Project Summary
 
-7. Algorithm Inventory
-
-18. Technology Stack
-
-2. Motivation
-
-8. Computer Vision Pipeline
-
-19. Repository Structure
+2. Clinical & Engineering Motivation
 
 3. Research Hypothesis
 
-9. Retinal Motion & Velocimetry
+4. Project Objectives
 
-20. Sample Scenarios
-
-4. Objectives
-
-10. Hemodynamic Features
-
-21. Experimental Results
-
-5. System Functions
-
-11. Biophysical Modeling
-
-22. Performance Metrics
+5. What the System Does
 
 6. End-to-End Architecture
 
-12. Anomaly Detection
+</details>
 
-23. Installation
+<details> <summary><b>👁️ Chapter II — Vision, Flow & Physics</b></summary>
 
+7. Complete Algorithm Inventory
 
+8. Computer Vision Pipeline
 
-13. NeuroOcularNet
+9. Retinal Motion & Velocimetry
 
-24. Run the App
+10. Hemodynamic Feature Engineering
 
+11. Biophysical & Rheological Modeling
 
+12. Spatio-Temporal Anomaly Detection
+
+</details>
+
+<details> <summary><b>🤖 Chapter III — AI & Inference</b></summary>
+
+13. AI Model: NeuroOcularNet
 
 14. Model Inputs & Outputs
 
-25. Cloud Deployment
+15. Training & Normalization Pipeline
 
-
-
-15. Training Pipeline
-
-26. Input Requirements
-
-
-
-16. ONNX Deployment
-
-27. Output Interpretation
-
-
+16. ONNX Edge Deployment
 
 17. Application Layer
 
-28. Limitations
+</details>
 
+<details> <summary><b>🧰 Chapter IV — Engineering & Evaluation</b></summary>
 
+18. Technology Stack
 
+19. Repository Structure
 
+20. Sample Clinical Scenarios
 
-29. Validation Roadmap
+21. Experimental Results
 
+22. Performance Metrics
 
+</details>
 
+<details> <summary><b>▶️ Chapter V — Run & Use the Platform</b></summary>
 
+23. Installation
+
+24. Running the Application
+
+25. Cloud Deployment
+
+26. Input Requirements
+
+27. Output Interpretation
+
+</details>
+
+<details> <summary><b>🔬 Chapter VI — Validation & Next Steps</b></summary>
+
+28. Failure Modes & Limitations
+
+29. Clinical Validation Roadmap
 
 30. Future Development
 
-
-
-
-
 31. Security & Privacy
-
-
-
-
 
 32. Intellectual Property
 
-
-
-
-
 33. License
-
-
-
-
 
 34. Citation
 
-
-
-
-
 35. Author
+
+</details>
+
+<div align="center">
+
+CHAPTER I
+📌 System Foundation
+Problem → Hypothesis → Objectives → System Architecture
+
+</div>
 
 <a id="1-project-summary"></a>
 
-<div align="center">
+<h2 align="center">📌 1. Project Summary</h2> <p align="center"><i>Quick orientation: what the platform does and its four core functions.</i></p>
 
-📌 1. Project Summary
+NeuroOcular AI converts a retinal microvascular video sequence into a structured hemodynamic analysis pipeline.
 
-What NeuroOcular AI is and what problem it is designed to investigate.
+The system performs four major tasks:
 
-</div>
+A. Retinal Flow Extraction
+Detects motion inside retinal vessel regions and estimates frame-to-frame blood-flow-related movement.
 
-Overview
+B. Hemodynamic Analysis
+Transforms image-space motion into interpretable flow features such as:
 
-NeuroOcular AI is a hybrid medical-AI research platform that transforms retinal microvascular video into a structured hemodynamic analysis pipeline.
+mean velocity,
 
-Instead of relying only on raw image intensity, the system combines:
+local velocity variance,
 
-retinal computer vision,
+flow deceleration,
 
-dense optical flow,
+shear-related descriptors,
 
-hemodynamic feature engineering,
+stagnation ratio,
 
-fluid-mechanics approximations,
+and temporal flow instability.
 
-lightweight neural regression,
+C. Physics-Informed Physiological Estimation
+Uses engineered hemodynamic features as inputs to a compact neural network to estimate:
 
-spatio-temporal anomaly detection,
+blood glucose level
 
-and edge-oriented ONNX inference.
+dynamic blood viscosity
 
-Core Outputs
+D. Pre-Occlusive Flow Anomaly Detection
+Detects and localizes persistent regions of abnormal flow reduction that may represent a pre-occlusive microvascular event.
 
-The current prototype produces three main categories of output:
-
-Output
-
-Description
-
-Estimated Blood Glucose
-
-Model-based glucose-related estimate in mg/dL
-
-Estimated Dynamic Viscosity
-
-Inferred apparent blood viscosity in mPa·s
-
-Flow Anomaly Alert
-
-Localized region of abnormal persistent flow deceleration
-
-System Philosophy
-
-The project uses a hybrid physics + AI architecture.
-
-Retinal Video
-      ↓
-Computer Vision
-      ↓
-Hemodynamic Features
-      ↓
-Physics-Informed Representation
-      ↓
-Neural Regression + Anomaly Detection
-      ↓
-Physiological & Spatial Outputs
-
-The goal is interpretability: the AI model receives meaningful hemodynamic variables instead of being asked to infer everything directly from raw video.
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="2-clinical--engineering-motivation"></a>
 
-<div align="center">
+<h2 align="center">🎯 2. Clinical & Engineering Motivation</h2> <p align="center"><i>Why this problem matters and why retinal microcirculation is being investigated.</i></p>
 
-🎯 2. Clinical & Engineering Motivation
+2.1 Glucose Monitoring
+Conventional glucose measurement methods generally depend on:
 
-Why retinal microcirculation is relevant to glucose-related physiology and vascular-flow monitoring.
+capillary blood sampling,
 
-</div>
+venous laboratory analysis,
 
-2.1 Glucose Monitoring Challenge
+or interstitial-fluid-based continuous glucose monitoring.
 
-Conventional glucose monitoring typically relies on:
+Interstitial glucose and blood glucose are physiologically related but are not identical signals, especially during periods of rapid glucose change.
 
-finger-stick capillary blood sampling,
+NeuroOcular AI explores whether retinal microvascular hemodynamics can provide additional non-invasive physiological information correlated with glucose state.
 
-venous laboratory testing,
+2.2 Microvascular Thrombosis
+Many vascular imaging techniques are optimized for macroscopic pathology.
 
-or Continuous Glucose Monitoring (CGM).
+NeuroOcular AI instead focuses on the earlier hemodynamic question:
 
-CGMs measure glucose primarily in interstitial fluid, not directly in circulating blood. During rapid glucose transitions, physiological lag can occur between blood and interstitial glucose values.
+Can persistent localized flow deceleration be detected before complete microvascular obstruction?
 
-2.2 Microvascular Flow Challenge
+The system therefore analyzes dynamic flow behavior, rather than searching only for a visible static clot.
 
-Many conventional imaging methods are optimized for:
-
-established vascular occlusion,
-
-visible stenosis,
-
-macroscopic thrombi,
-
-or downstream perfusion deficits.
-
-This project investigates an earlier-stage signal:
-
-Can persistent local flow deceleration reveal a pre-occlusive vascular abnormality before complete obstruction?
-
-2.3 Why the Retina?
-
-The retinal vasculature is attractive for research because it provides direct optical access to microvascular structures.
-
-This makes it a candidate environment for studying:
-
-flow dynamics,
-
-vessel-level motion,
-
-local perfusion changes,
-
-and temporal vascular anomalies.
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="3-research-hypothesis"></a>
 
-<div align="center">
+<h2 align="center">🧪 3. Research Hypothesis</h2> <p align="center"><i>The scientific assumptions behind the proposed system.</i></p>
 
-🧪 3. Research Hypothesis
+The project is built around three linked hypotheses.
 
-The scientific assumptions that connect retinal flow, rheology, glucose state, and pre-occlusive events.
+Hypothesis 1 — Retinal Flow as a Physiological Biomarker
+Retinal microvascular circulation may carry measurable information about systemic physiological state.
 
-</div>
-
-Hypothesis A — Retinal Flow as a Physiological Signal
-
-Retinal microvascular circulation may contain measurable information related to systemic physiological state.
-
-Hypothesis B — Rheological Coupling
-
-Changes in the following variables may alter local flow dynamics:
+Hypothesis 2 — Rheological Coupling
+Changes in variables such as:
 
 glucose,
 
@@ -380,97 +240,64 @@ hematocrit,
 
 vessel diameter,
 
-and shear conditions.
+and shear conditions
 
-Hypothesis C — Localized Pre-Occlusive Signature
+can influence microvascular flow patterns.
 
-A developing local obstruction may generate a combination of:
+Hypothesis 3 — Early Flow Restriction Signature
+A developing local obstruction may create a detectable pattern of:
 
-reduced velocity,
+flow reduction,
 
-abnormal spatial gradients,
+spatial asymmetry,
 
-increased stagnation,
+abnormal velocity gradients,
 
-temporal persistence,
+and persistent local stagnation
 
-and asymmetric flow behavior.
+before total lumen occlusion.
 
-The anomaly subsystem is designed to detect this pattern computationally.
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="4-project-objectives"></a>
 
-<div align="center">
+<h2 align="center">✅ 4. Project Objectives</h2> <p align="center"><i>The concrete engineering goals of the prototype.</i></p>
 
-✅ 4. Project Objectives
+The technical objectives are:
 
-The complete set of engineering goals implemented by the prototype.
-
-</div>
-
-Vision Objectives
-
-Read retinal video sequences.
-
-Preprocess frames for stable motion estimation.
+Process retinal microvascular video.
 
 Detect motion-sensitive vascular regions.
 
-Compute dense optical flow.
+Estimate dense frame-to-frame motion.
 
-Extract flow magnitude and direction.
+Extract hemodynamic features.
 
-Hemodynamic Objectives
+Estimate relative microvascular velocity.
 
-Estimate relative microvascular motion.
+Approximate wall shear-related parameters.
 
-Compute flow variability.
+Estimate dynamic blood viscosity.
 
-Approximate wall shear-related variables.
+Estimate glucose-related physiological output.
 
-Detect stagnation and local flow drop.
+Monitor spatial flow behavior over time.
 
-derive pulsatility-related descriptors.
+Detect persistent local flow deceleration.
 
-AI Objectives
+Localize suspicious anomaly coordinates.
 
-Normalize engineered features.
+Produce real-time visualization through Streamlit.
 
-Infer glucose-related output.
+Deploy the learned predictor through ONNX Runtime.
 
-Infer viscosity-related output.
+Keep inference lightweight enough for edge deployment.
 
-Export the trained model to ONNX.
-
-Run low-latency edge inference.
-
-Anomaly Detection Objectives
-
-Build a temporal flow baseline.
-
-Compute local deviation from baseline.
-
-Detect persistent abnormal deceleration.
-
-Localize the anomaly.
-
-Generate a severity indicator.
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="5-what-the-system-does"></a>
 
-<div align="center">
-
-⚙️ 5. What the System Does
-
-The functional behavior of the system from raw video to final output.
-
-</div>
-
-Functional Flow
+<h2 align="center">⚙️ 5. What the System Does</h2> <p align="center"><i>A functional view of the pipeline from video input to outputs.</i></p>
 
 INPUT
   ↓
@@ -478,498 +305,120 @@ Retinal Microvascular Video
   ↓
 Preprocessing
   ↓
-Motion ROI
+Motion-Based ROI Detection
   ↓
 Dense Optical Flow
   ↓
-Flow / Hemodynamic Features
+Velocity / Flow Feature Extraction
   ↓
 ────────────────────────────────────────────
 │                                          │
 ▼                                          ▼
-Physiological Inference             Anomaly Detection
+Physics-Informed Predictor           Temporal Anomaly Engine
 │                                          │
-├─ Glucose Estimate                       ├─ Z-Score Map
-├─ Viscosity Estimate                     ├─ Nadir Point
-└─ Hemodynamic Indicators                 ├─ Bounding Region
-                                           └─ Severity Score
-
-Functional Modules
-
-Module
-
-Responsibility
-
-Video Module
-
-Reads and samples retinal frames
-
-Preprocessing Module
-
-Stabilizes image quality
-
-Motion Module
-
-Extracts flow-related displacement
-
-Hemodynamic Module
-
-Converts motion into physiological descriptors
-
-AI Module
-
-Predicts glucose and viscosity
-
-Anomaly Module
-
-Detects local abnormal flow deceleration
-
-UI Module
-
-Displays results in Streamlit
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+├─ Estimated Glucose                       ├─ Flow Drop
+├─ Estimated Viscosity                     ├─ Z-Score Map
+└─ Hemodynamic Indicators                  ├─ Anomaly Core
+                                           └─ Severity Estimate
+<br>
 
 <a id="6-end-to-end-architecture"></a>
 
-<div align="center">
-
-🏗️ 6. End-to-End Architecture
-
-The complete computational pipeline and the relationship between all system components.
-
-</div>
-
-Architecture Diagram
+<h2 align="center">🏗️ 6. End-to-End Architecture</h2> <p align="center"><i>How all modules connect in one computational workflow.</i></p>
 
 flowchart TD
 
-    A[Retinal Video] --> B[Frame Acquisition]
-    B --> C[Preprocessing]
+    A[Retinal Video Sequence] --> B[Frame Acquisition]
+    B --> C[Frame Preprocessing]
 
-    C --> C1[Intensity Conversion]
+    C --> C1[Grayscale / Channel Processing]
     C --> C2[Denoising]
     C --> C3[Normalization]
     C --> C4[Contrast Enhancement]
 
     C --> D[Cumulative Motion Mask]
-    D --> E[Motion ROI]
+    D --> E[Retinal Motion ROI]
 
-    E --> F[Farneback Dense Optical Flow]
-    F --> G[Velocity Magnitude]
-    F --> H[Flow Direction]
+    E --> F[Dense Optical Flow]
+    F --> F1[Farneback Algorithm]
 
-    G --> I[Hemodynamic Feature Engine]
+    F1 --> G[Velocity Magnitude Field]
+    F1 --> H[Motion Direction Field]
+
+    G --> I[Hemodynamic Feature Extraction]
 
     I --> I1[Mean Velocity]
     I --> I2[Velocity STD]
-    I --> I3[Flow Drop]
-    I --> I4[Shear Features]
+    I --> I3[Temporal Gradient]
+    I --> I4[Shear-Related Features]
     I --> I5[Stagnation Ratio]
-    I --> I6[Pulsatility]
+    I --> I6[Pulsatility Features]
 
     I --> J[Feature Normalization]
     J --> K[NeuroOcularNet]
 
-    K --> L[Glucose Estimate]
-    K --> M[Viscosity Estimate]
+    K --> L[Estimated Glucose]
+    K --> M[Estimated Dynamic Viscosity]
 
-    G --> N[Temporal Baseline]
-    N --> O[Z-Score Map]
-    O --> P[Local Nadir Detection]
-    P --> Q[Bounding Box]
-    P --> R[Coordinates]
-    P --> S[Severity]
+    G --> N[Spatio-Temporal Baseline]
+    N --> O[Z-Score Anomaly Map]
+    O --> P[Local Nadir / Stagnation Detection]
+    P --> Q[Bounding Region]
+    P --> R[Anomaly Coordinates]
+    P --> S[Severity Estimate]
 
     L --> T[Streamlit Dashboard]
     M --> T
     Q --> T
     R --> T
     S --> T
+<br>
 
-Architecture Layers
-
-Layer
-
-Main Components
-
-Acquisition
-
-Retinal video
-
-Preprocessing
-
-Denoising, normalization, contrast
-
-Computer Vision
-
-Motion mask + optical flow
-
-Hemodynamics
-
-Velocity, shear, stagnation, pulsatility
-
-AI
-
-NeuroOcularNet
-
-Anomaly Detection
-
-Z-score + persistence + localization
-
-Deployment
-
-ONNX Runtime
-
-Presentation
-
-Streamlit
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
-
-<a id="7-algorithm-inventory"></a>
+<p align="right"><a href="#top">↑ Back to top</a> · <a href="#7-complete-algorithm-inventory">Next chapter →</a></p>
 
 <div align="center">
 
-🧠 7. Algorithm Inventory
-
-Every major algorithm and computational method used by the platform.
+CHAPTER II
+👁️ Vision, Flow & Physics
+Computer Vision → Velocimetry → Hemodynamics → Anomaly Detection
 
 </div>
 
-Complete Algorithm Table
-
-#
-
-Algorithm / Method
-
-Category
-
-Purpose
-
-Input
-
-Output
-
-1
-
-Frame Sampling
-
-Video Processing
-
-Read sequence frame-by-frame
-
-Video
-
-Frames
-
-2
-
-Grayscale / Intensity Conversion
-
-Image Processing
-
-Simplify motion representation
-
-RGB frame
-
-Intensity frame
-
-3
-
-Denoising
-
-Preprocessing
-
-Suppress noise
-
-Frame
-
-Smoothed frame
-
-4
-
-Intensity Normalization
-
-Preprocessing
-
-Reduce illumination variation
-
-Frame
-
-Normalized frame
-
-5
-
-Contrast Enhancement
-
-Preprocessing
-
-Improve local visual structure
-
-Frame
-
-Enhanced frame
-
-6
-
-Cumulative Motion Masking
-
-Motion Segmentation
-
-Detect repeatedly moving regions
-
-Frame sequence
-
-ROI mask
-
-7
-
-Farneback Dense Optical Flow
-
-Computer Vision
-
-Estimate pixel-wise displacement
-
-Consecutive frames
-
-Flow field
-
-8
-
-Flow Magnitude
-
-Motion Analysis
-
-Convert (u,v) to motion magnitude
-
-Flow field
-
-Velocity map
-
-9
-
-Temporal Averaging
-
-Signal Processing
-
-Build local baseline
-
-Velocity history
-
-Baseline map
-
-10
-
-Standard Deviation Mapping
-
-Statistics
-
-Model expected local variation
-
-Velocity history
-
-σ map
-
-11
-
-Spatio-Temporal Z-Score
-
-Anomaly Detection
-
-Detect abnormal flow drop
-
-Current + baseline
-
-Z-map
-
-12
-
-Local Nadir Detection
-
-Localization
-
-Find strongest stagnation point
-
-Z-map
-
-Coordinates
-
-13
-
-Threshold Region Detection
-
-Decision Logic
-
-Segment abnormal flow
-
-Z-map
-
-Binary mask
-
-14
-
-Bounding Box Localization
-
-Computer Vision
-
-Draw anomaly region
-
-Binary mask
-
-Bounding box
-
-15
-
-Poiseuille Approximation
-
-Fluid Mechanics
-
-Idealized vessel-flow model
-
-Radius + velocity
-
-Flow profile
-
-16
-
-Wall Shear Approximation
-
-Hemodynamics
-
-Estimate shear rate
-
-Velocity + radius
-
-Shear rate
-
-17
-
-Non-Newtonian Rheology
-
-Biofluid Mechanics
-
-Model shear-dependent viscosity
-
-Shear + parameters
-
-Viscosity
-
-18
-
-Feature Normalization
-
-Machine Learning
-
-Scale model features
-
-Raw features
-
-Normalized features
-
-19
-
-NeuroOcularNet
-
-Neural Regression
-
-Predict physiological targets
-
-Feature vector
-
-Glucose + viscosity
-
-20
-
-ONNX Graph Execution
-
-Edge AI
-
-Fast inference
-
-Tensor
-
-Prediction tensor
-
-21
-
-Persistence Logic
-
-Temporal Analysis
-
-Reject isolated anomalies
-
-Z history
-
-Persistent mask
-
-22
-
-Severity Estimation
-
-Decision Layer
-
-Quantify anomaly strength
-
-Anomaly metrics
-
-Severity score
-
-Algorithm Families
-
-Computer Vision
-
-Cumulative Motion Masking
-
-Farneback Dense Optical Flow
-
-Bounding Box Localization
-
-Signal Processing
-
-Temporal Averaging
-
-Velocity Gradient Analysis
-
-Pulsatility Estimation
-
-Statistics
-
-Standard Deviation Mapping
-
-Z-Score Analysis
-
-Physics
-
-Poiseuille Approximation
-
-Wall Shear Rate
-
-Non-Newtonian Viscosity
-
-Machine Learning
-
-Feature Scaling
-
-NeuroOcularNet
-
-ONNX Inference
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<a id="7-complete-algorithm-inventory"></a>
+
+<h2 align="center">🧠 7. Complete Algorithm Inventory</h2> <p align="center"><i>A single reference table for every core algorithm and method.</i></p>
+
+This section documents the core algorithms used by the project.
+
+#	Algorithm / Method	Category	Purpose	Input	Output
+1	Frame Sampling	Video Processing	Read retinal sequence frame-by-frame	Video	Frames
+2	Grayscale / Intensity Conversion	Image Processing	Reduce dimensionality for motion analysis	RGB frame	Intensity image
+3	Denoising	Preprocessing	Reduce image noise before optical flow	Frame	Smoothed frame
+4	Intensity Normalization	Preprocessing	Reduce illumination variability	Frame	Normalized frame
+5	Cumulative Motion Masking	Motion Segmentation	Identify repeatedly moving vascular regions	Consecutive frames	ROI mask
+6	Farneback Dense Optical Flow	Computer Vision	Estimate dense pixel-wise displacement	Frame pair	2D flow field
+7	Flow Magnitude Calculation	Motion Analysis	Convert x/y displacement into speed magnitude	u, v vectors	Velocity magnitude
+8	Temporal Averaging	Signal Processing	Build local baseline behavior	Velocity history	Baseline map
+9	Standard Deviation Mapping	Statistical Modeling	Measure expected temporal flow variation	Velocity history	σ map
+10	Spatial-Temporal Z-Score	Anomaly Detection	Detect abnormal local flow reduction	Current + baseline flow	Z-map
+11	Local Nadir Detection	Anomaly Localization	Find strongest stagnation point	Z-map / velocity map	(x, y)
+12	Threshold-Based Region Detection	Decision Logic	Isolate abnormal region	Z-map	Binary anomaly mask
+13	Bounding Box Localization	Computer Vision	Display suspicious region	Binary mask	Bounding box
+14	Poiseuille-Type Velocity Model	Fluid Mechanics	Model idealized vessel flow profile	Radius + velocity	Velocity profile
+15	Wall Shear Approximation	Hemodynamics	Estimate shear-related flow conditions	Velocity + radius	Shear rate
+16	Non-Newtonian Viscosity Model	Rheology	Relate viscosity to shear state	Shear + physiological terms	Viscosity
+17	Feature Normalization	Machine Learning	Scale feature vector for model inference	Raw features	Normalized features
+18	NeuroOcularNet	Neural Network	Predict physiological targets	Feature vector	Glucose + viscosity
+19	ONNX Graph Execution	Edge AI	Lightweight model inference	Tensor	Prediction tensor
+20	Severity Estimation	Decision Layer	Quantify anomaly intensity	Anomaly metrics	Severity value
+<br>
 
 <a id="8-computer-vision-pipeline"></a>
 
-<div align="center">
+<h2 align="center">👁️ 8. Computer Vision Pipeline</h2> <p align="center"><i>How retinal frames are prepared before motion estimation.</i></p>
 
-👁️ 8. Computer Vision Pipeline
-
-How raw retinal frames are prepared before motion and hemodynamic analysis.
-
-</div>
-
-8.1 Frame Acquisition
-
-A retinal video is represented as:
+8.1 Video Frame Acquisition
+The video is decomposed into a sequence:
 
 [
 I_1, I_2, I_3, \dots, I_T
@@ -977,86 +426,58 @@ I_1, I_2, I_3, \dots, I_T
 
 where:
 
-(I_t) = frame at time (t)
+(I_t) is the frame at time (t)
 
-(T) = total number of frames.
+(T) is the total number of frames.
 
-8.2 Intensity Conversion
+8.2 Frame Preprocessing
+Preprocessing is used to improve stability before motion estimation.
 
-Frames may be converted from RGB to a lower-dimensional intensity representation for motion estimation.
+Typical operations include:
 
-Purpose
+Intensity Conversion
+Converts the video representation into an intensity domain suitable for motion calculation.
 
-lower computational cost,
-
-reduced sensitivity to color variation,
-
-improved compatibility with classical optical-flow methods.
-
-8.3 Denoising
-
-Denoising suppresses:
+Denoising
+Reduces:
 
 sensor noise,
 
 compression artifacts,
 
-random high-frequency variation.
+local flickering.
 
-8.4 Intensity Normalization
+Normalization
+Reduces sensitivity to global brightness changes.
 
-A standard normalization form is:
+Conceptually:
 
 \frac{I-\mu_I}{\sigma_I+\epsilon}
 ]
 
-where:
+Contrast Enhancement
+Used when vessel boundaries or intravascular intensity patterns have insufficient local contrast.
 
-(\mu_I) = mean frame intensity,
-
-(\sigma_I) = frame intensity standard deviation,
-
-(\epsilon) = numerical stability term.
-
-8.5 Contrast Enhancement
-
-Contrast enhancement can be applied when vessel boundaries or intravascular structures are difficult to distinguish.
-
-Potential methods include:
-
-histogram normalization,
-
-local contrast enhancement,
-
-CLAHE.
-
-The exact preprocessing configuration should remain fixed during validation to avoid introducing acquisition-dependent bias.
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="9-retinal-motion--velocimetry"></a>
 
-<div align="center">
-
-🎞️ 9. Retinal Motion & Velocimetry
-
-How the system estimates microvascular motion from consecutive retinal frames.
-
-</div>
+<h2 align="center">🎞️ 9. Retinal Motion & Velocimetry</h2> <p align="center"><i>How dense optical flow is used to estimate retinal motion.</i></p>
 
 9.1 Cumulative Motion Mask
+A cumulative motion representation identifies pixels that repeatedly exhibit frame-to-frame change.
 
-The frame-difference signal can be written as:
+Example conceptual formulation:
 
 |I_t(x,y)-I_{t-1}(x,y)|
 ]
 
-A cumulative representation is then:
+A cumulative map can be formed as:
 
 \sum_{t=2}^{T} M_t(x,y)
 ]
 
-The motion ROI is:
+Thresholding the cumulative map gives a motion-sensitive ROI:
 
 \begin{cases}
 1 & M_{cum}(x,y) > \tau_m \
@@ -1064,88 +485,87 @@ The motion ROI is:
 \end{cases}
 ]
 
-Why It Is Used
+This suppresses static retinal structures and focuses processing on dynamically changing regions.
 
-The cumulative mask suppresses mostly static retinal background and highlights repeatedly changing regions.
+9.2 Farneback Dense Optical Flow
+The project uses the Gunnar Farneback dense optical flow algorithm.
 
-9.2 Gunnar Farneback Dense Optical Flow
+Unlike sparse tracking methods, Farneback estimates a motion vector for a large fraction of image pixels.
 
-Farneback estimates a dense 2D motion vector:
+The resulting flow field is:
 
-(u(x,y),v(x,y))
+(u(x,y), v(x,y))
 ]
 
 where:
 
-(u) = horizontal displacement,
+(u(x,y)) = horizontal displacement
 
-(v) = vertical displacement.
+(v(x,y)) = vertical displacement.
 
-The magnitude is:
+The flow magnitude is:
 
 \sqrt{u(x,y)^2+v(x,y)^2}
 ]
 
-Why Farneback?
+This magnitude is treated as an image-space proxy for local motion velocity.
 
-It was selected because it is:
+Why Farneback?
+It is useful for this prototype because it is:
 
 dense,
 
-computationally efficient,
-
 deterministic,
+
+computationally lightweight,
 
 available in OpenCV,
 
-suitable for frame-to-frame motion analysis.
+suitable for frame-to-frame motion,
 
-Main OpenCV Parameters
+practical for real-time or near-real-time analysis.
 
-Parameter
-
-Function
+Relevant Farneback Parameters
+The OpenCV implementation exposes parameters such as:
 
 pyr_scale
-
-Pyramid image scale
-
 levels
-
-Number of pyramid levels
-
 winsize
-
-Averaging-window size
-
 iterations
-
-Iterations per level
-
 poly_n
-
-Neighborhood polynomial size
-
 poly_sigma
-
-Gaussian sigma
-
 flags
+These parameters control:
 
-Optional algorithm flags
+image pyramid scale,
 
-9.3 Velocity Conversion
+multi-resolution depth,
 
-Raw optical flow is expressed in:
+neighborhood size,
+
+refinement iterations,
+
+local polynomial approximation,
+
+smoothing behavior.
+
+The exact values should be tuned against the retinal acquisition setup.
+
+9.3 Image-Space Velocity
+If optical flow displacement is measured in:
 
 pixels / frame
+then image-space velocity can be converted to:
 
-Converted to pixels per second:
+pixels / second
+using:
 
 v_{px/frame}\times FPS
 ]
 
-If a spatial calibration coefficient exists:
+Absolute physiological velocity requires spatial calibration.
+
+If the calibration factor is:
 
 [
 C = \frac{\mu m}{pixel}
@@ -1156,74 +576,24 @@ then:
 v_{px/s}\times C
 ]
 
-Without spatial calibration, optical-flow magnitude remains an image-space motion estimate rather than absolute physiological blood velocity.
+Without this calibration, the system must not report optical-flow magnitude as true physical blood velocity.
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="10-hemodynamic-feature-engineering"></a>
 
-<div align="center">
+<h2 align="center">📈 10. Hemodynamic Feature Engineering</h2> <p align="center"><i>How motion fields become interpretable flow features.</i></p>
 
-📈 10. Hemodynamic Feature Engineering
+The optical-flow field is transformed into a compact feature vector.
 
-How optical-flow measurements are converted into interpretable physiological descriptors.
-
-</div>
-
-Feature Set
-
-Feature
-
-Purpose
-
-Mean Velocity
-
-Average local motion
-
-Velocity STD
-
-Flow heterogeneity
-
-Maximum Velocity
-
-Peak local motion
-
-Temporal Gradient
-
-Acceleration / deceleration
-
-Relative Flow Drop
-
-Reduction from baseline
-
-Stagnation Ratio
-
-Fraction of low-flow pixels
-
-Motion Occupancy
-
-Active-flow area
-
-Pulsatility Index
-
-Temporal flow variation
-
-Shear Rate
-
-Near-wall flow gradient
-
-Anomaly Score
-
-Deviation from normal local behavior
-
-10.1 Mean Velocity
-
+10.1 Mean Flow Velocity
 \frac{1}{N}
 \sum_{i=1}^{N}v_i
 ]
 
-10.2 Velocity Standard Deviation
+Represents average motion inside the selected vascular ROI.
 
+10.2 Velocity Standard Deviation
 \sqrt{
 \frac{1}{N}
 \sum_{i=1}^{N}
@@ -1231,18 +601,21 @@ Deviation from normal local behavior
 }
 ]
 
-10.3 Maximum Velocity
+Measures flow heterogeneity.
 
+10.3 Maximum Local Velocity
 \max(v_1,\dots,v_N)
 ]
 
-10.4 Temporal Velocity Gradient
+Useful for identifying the fastest local motion region.
 
+10.4 Temporal Velocity Gradient
 v_t-v_{t-1}
 ]
 
-10.5 Relative Flow Drop
+Captures acceleration or deceleration over time.
 
+10.5 Relative Flow Drop
 \frac{
 v_{baseline}-v_{current}
 }{
@@ -1250,7 +623,10 @@ v_{baseline}+\epsilon
 }
 ]
 
+A high value indicates substantial local deceleration.
+
 10.6 Stagnation Ratio
+One useful implementation is:
 
 \frac{
 N(v<\tau_s)
@@ -1259,8 +635,13 @@ N_{ROI}
 }
 ]
 
-10.7 Motion Occupancy
+where:
 
+(\tau_s) = low-flow threshold
+
+(N(v<\tau_s)) = number of low-flow pixels.
+
+10.7 Vessel / Motion Occupancy
 \frac{
 N_{active}
 }{
@@ -1268,7 +649,10 @@ N_{image}
 }
 ]
 
-10.8 Pulsatility Index
+Describes how much of the analyzed region contains significant motion.
+
+10.8 Pulsatility-Related Index
+If a temporal waveform is available:
 
 \frac{
 v_{max}-v_{min}
@@ -1277,19 +661,16 @@ v_{mean}+\epsilon
 }
 ]
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
+This can characterize temporal flow variation.
+
+<br>
 
 <a id="11-biophysical--rheological-modeling"></a>
 
-<div align="center">
-
-🩸 11. Biophysical & Rheological Modeling
-
-The physics layer used to interpret motion in hemodynamic terms.
-
-</div>
+<h2 align="center">🩸 11. Biophysical & Rheological Modeling</h2> <p align="center"><i>The fluid-mechanics equations used to interpret those features.</i></p>
 
 11.1 Poiseuille-Type Velocity Profile
+A simplified laminar flow profile can be represented as:
 
 v_{max}
 \left(
@@ -1297,38 +678,38 @@ v_{max}
 \right)
 ]
 
-Symbol
+where:
 
-Meaning
+(r) = radial distance from vessel center
 
-(v(r))
+(R) = vessel radius
 
-Velocity at radial location
+(v_{max}) = centerline velocity.
 
-(v_{max})
+Important Note
+Real microvascular blood flow is more complex than ideal Poiseuille flow because:
 
-Maximum centerline velocity
+blood is non-Newtonian,
 
-(r)
+red blood cells deform,
 
-Radial distance
+hematocrit varies,
 
-(R)
+vessel walls are biological and elastic,
 
-Vessel radius
+capillary diameters approach cellular dimensions.
 
-Real microvascular blood flow is more complex because blood is non-Newtonian, erythrocytes deform, vessel walls are biological, and capillary dimensions approach cellular scale.
+Therefore this equation is used as a modeling approximation, not as a complete description of retinal blood flow.
 
 11.2 Wall Shear Rate
-
-General form:
+The general expression is:
 
 \left.
 \frac{\partial v}{\partial r}
 \right|_{r=R}
 ]
 
-Simplified laminar approximation:
+For simplified laminar flow:
 
 [
 \dot{\gamma}_{wall}
@@ -1337,21 +718,21 @@ Simplified laminar approximation:
 ]
 
 11.3 Shear Stress
+If viscosity is available:
 
 \eta\dot{\gamma}
 ]
 
 where:
 
-(\tau) = shear stress,
+(\tau) = shear stress
 
-(\eta) = apparent dynamic viscosity,
+(\eta) = apparent viscosity
 
 (\dot{\gamma}) = shear rate.
 
 11.4 Non-Newtonian Viscosity Model
-
-A generalized Carreau-Yasuda-style relationship is represented as:
+A generalized Carreau-Yasuda-style formulation can be written as:
 
 \eta_\infty
 +
@@ -1363,83 +744,36 @@ A generalized Carreau-Yasuda-style relationship is represented as:
 \right]^{\frac{n-1}{a}}
 ]
 
-Parameter
+where:
 
-Meaning
+Symbol	Meaning
+(\eta)	apparent dynamic viscosity
+(\eta_0)	low-shear viscosity
+(\eta_\infty)	high-shear limiting viscosity
+(\dot{\gamma})	shear rate
+(\lambda)	time constant
+(a)	transition parameter
+(n)	flow behavior index
+(G)	glucose-related physiological term
+The glucose-to-rheology relationship must be calibrated empirically using paired physiological measurements.
 
-(\eta)
-
-Apparent viscosity
-
-(\eta_0)
-
-Low-shear viscosity
-
-(\eta_\infty)
-
-High-shear viscosity
-
-(\dot{\gamma})
-
-Shear rate
-
-(\lambda)
-
-Time constant
-
-(a)
-
-Transition parameter
-
-(n)
-
-Flow behavior index
-
-(G)
-
-Glucose-related physiological term
-
-The mapping between glucose and rheological behavior must ultimately be calibrated with paired real clinical measurements.
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="12-spatio-temporal-anomaly-detection"></a>
 
-<div align="center">
+<h2 align="center">🚨 12. Spatio-Temporal Anomaly Detection</h2> <p align="center"><i>How persistent local flow reduction is detected and localized.</i></p>
 
-🚨 12. Spatio-Temporal Anomaly Detection
+The anomaly subsystem operates independently from the physiological regression output.
 
-How the system detects local flow deceleration that persists beyond expected variation.
-
-</div>
-
-Detection Logic
-
-Velocity History
-      ↓
-Local Baseline
-      ↓
-Local Standard Deviation
-      ↓
-Z-Score Map
-      ↓
-Thresholding
-      ↓
-Persistence Check
-      ↓
-Nadir Localization
-      ↓
-Bounding Box + Severity
-
-12.1 Local Baseline
+12.1 Baseline Flow Map
+For each pixel or vascular region:
 
 \frac{1}{T_b}
 \sum_{t=1}^{T_b}
 v(x,y,t)
 ]
 
-12.2 Local Temporal Variation
-
+12.2 Local Temporal Variance
 \sqrt{
 \frac{1}{T_b}
 \sum
@@ -1449,7 +783,8 @@ v(x,y,t)-\bar{v}_{baseline}(x,y)
 }
 ]
 
-12.3 Z-Score Anomaly Map
+12.3 Spatio-Temporal Z-Score
+The anomaly score is:
 
 \frac{
 \bar{v}_{baseline}(x,y)-v(x,y,t)
@@ -1460,30 +795,35 @@ v(x,y,t)-\bar{v}_{baseline}(x,y)
 
 Interpretation:
 
-Z-Score Behavior
+Low Z-score
+    ↓
+Flow behaves near baseline
 
-Interpretation
-
-Near zero
-
-Flow close to local baseline
-
-Moderate positive
-
-Reduced local flow
-
-High positive
-
-Strong local deceleration
-
-12.4 Nadir Localization
+High positive Z-score
+    ↓
+Current flow is substantially lower than baseline
+12.4 Local Nadir Detection
+The strongest local deceleration region can be estimated from:
 
 \arg\max_{x,y} Z(x,y,t)
 ]
 
-This gives the strongest local stagnation candidate.
+or equivalently from the local minimum velocity.
+
+The system can then generate:
+
+anomaly center,
+
+bounding region,
+
+deceleration heatmap,
+
+persistence score.
 
 12.5 Persistence Logic
+A single abnormal frame should not automatically represent a thrombotic event.
+
+A more reliable decision rule includes temporal persistence:
 
 \sum_{t=t_0}^{t_1}
 \mathbb{1}
@@ -1492,80 +832,55 @@ Z(x,y,t)>\tau_Z
 \right]
 ]
 
-Persistence reduces sensitivity to single-frame artifacts.
+Persistent anomalies are more important than isolated spikes.
 
-Detection Output
+<br>
 
-The anomaly subsystem may return:
-
-anomaly center,
-
-bounding box,
-
-local flow reduction,
-
-persistence level,
-
-severity estimate.
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
-
-<a id="13-ai-model-neuroocularnet"></a>
+<p align="right"><a href="#top">↑ Back to top</a> · <a href="#13-ai-model-neuroocularnet">Next chapter →</a></p>
 
 <div align="center">
 
-🤖 13. AI Model — NeuroOcularNet
-
-The lightweight neural regression model used for physiological inference.
+CHAPTER III
+🤖 AI & Inference
+Feature Vector → NeuroOcularNet → Training → ONNX → Application
 
 </div>
 
-Model Card
+<a id="13-ai-model-neuroocularnet"></a>
 
-Property
+<h2 align="center">🤖 13. AI Model: NeuroOcularNet</h2> <p align="center"><i>The lightweight regression model used for physiological estimation.</i></p>
 
-Value
+The learned prediction component is exported as:
 
-Model Name
+NeuroOcularNet.onnx
+Current model footprint:
 
-NeuroOcularNet
+≈ 10.28 KB
+The model receives engineered hemodynamic features rather than raw retinal video.
 
-Task
+This produces a hybrid architecture:
 
-Multi-output regression
+Physics / Computer Vision
+        +
+Feature Engineering
+        +
+Neural Regression
+instead of:
 
-Input Type
+Raw Video
+   ↓
+Opaque End-to-End Black Box
+13.1 Model Role
+NeuroOcularNet is responsible for mapping the extracted feature space to physiological prediction targets.
 
-Engineered hemodynamic feature vector
+Conceptually:
 
-Output Type
-
-Glucose + viscosity estimates
-
-Deployment Format
-
-ONNX
-
-Reported Size
-
-~10.28 KB
-
-Runtime
-
-ONNX Runtime
-
-Deployment Goal
-
-Edge / low-latency inference
-
-Model Role
-
-The model maps normalized features:
-
-[x_1,x_2,\dots,x_n]
+[
+x_1,x_2,\dots,x_n
+]
 ]
 
-to:
+and:
 
 [
 \hat{G},
@@ -1575,51 +890,37 @@ to:
 
 where:
 
-(\hat{G}) = estimated glucose,
+(\mathbf{x}) = normalized hemodynamic feature vector
 
-(\hat{\eta}) = estimated viscosity,
+(\hat{G}) = estimated glucose
 
-(\theta) = learned model parameters.
+(\hat{\eta}) = estimated viscosity
 
-Why a Compact Network?
+(\theta) = learned network parameters.
 
-A lightweight network provides:
+13.2 Why a Small Neural Network?
+A compact model provides:
 
-low latency,
+very low inference latency,
 
-low memory usage,
+low memory consumption,
 
-simpler deployment,
+easier edge deployment,
 
-easier ONNX export,
+simple ONNX export,
 
-better suitability for edge systems.
+reduced computational requirements,
 
-Architecture Philosophy
+easier integration into a real-time dashboard.
 
-Raw Video
-   ↓
-Interpretable Features
-   ↓
-Compact Neural Model
-   ↓
-Physiological Predictions
-
-This is intentionally different from a fully opaque end-to-end raw-video model.
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="14-model-inputs--outputs"></a>
 
-<div align="center">
+<h2 align="center">🔢 14. Model Inputs & Outputs</h2> <p align="center"><i>What enters the model and what the model returns.</i></p>
 
-🔢 14. Model Inputs & Outputs
-
-The exact information passed into and returned from the AI inference stage.
-
-</div>
-
-Candidate Input Feature Vector
+14.1 Candidate Input Feature Vector
+The feature vector may include:
 
 mean_velocity
 velocity_std
@@ -1631,119 +932,79 @@ stagnation_ratio
 motion_occupancy
 pulsatility_index
 anomaly_score
+The exact feature order used during inference must match the feature order used during training.
 
-The inference feature order must exactly match the feature order used during model training.
-
-Output Vector
+14.2 Model Output
+The model produces physiological estimates such as:
 
 Output 1 → Estimated Blood Glucose (mg/dL)
 Output 2 → Estimated Dynamic Viscosity (mPa·s)
-
-Input / Output Summary
-
-Stage
-
-Data Shape
-
-Raw Video
-
-Sequence of frames
-
-Optical Flow
-
-Dense 2D vector field
-
-Feature Engine
-
-Numerical feature vector
-
-NeuroOcularNet
-
-Normalized tensor
-
-Final Regression Output
-
-Two physiological estimates
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="15-training--normalization-pipeline"></a>
 
-<div align="center">
+<h2 align="center">🧬 15. Training & Normalization Pipeline</h2> <p align="center"><i>How features are scaled, trained, evaluated, and exported.</i></p>
 
-🧬 15. Training & Normalization Pipeline
+A typical training flow is:
 
-How feature data is prepared, optimized, evaluated, and exported.
-
-</div>
-
-Training Flow
-
-Raw / Simulated Samples
-        ↓
-Feature Construction
-        ↓
+Raw / Simulated Physiological Samples
+             ↓
+Hemodynamic Feature Construction
+             ↓
 Feature Matrix X
-        ↓
+             ↓
 Target Matrix Y
-        ↓
+             ↓
 Train / Validation Split
-        ↓
-Feature Scaling
-        ↓
-NeuroOcularNet Training
-        ↓
-Loss Optimization
-        ↓
-Evaluation
-        ↓
-ONNX Export
-
+             ↓
 Feature Normalization
-
-Standard scaling:
+             ↓
+NeuroOcularNet Training
+             ↓
+Loss Optimization
+             ↓
+Model Evaluation
+             ↓
+ONNX Export
+15.1 Normalization
+For a feature (x):
 
 \frac{x-\mu_x}{\sigma_x+\epsilon}
 ]
 
-Alternative min-max scaling:
+or using min-max scaling:
 
 \frac{x-x_{min}}{x_{max}-x_{min}}
 ]
 
-Training Loss
+The same training normalization parameters must be reused during inference.
 
-Mean Squared Error:
+15.2 Regression Loss
+The reported model convergence uses Mean Squared Error.
 
 \frac{1}{N}
 \sum_{i=1}^{N}
 (y_i-\hat{y}_i)^2
 ]
 
-Reported prototype scaled MSE:
+Prototype reported scaled MSE:
 
 0.0421
+This value should be interpreted in the context of the normalization and target scaling used during training.
 
-MSE must always be interpreted in the context of the scaling and normalization used for the target variables.
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="16-onnx-edge-deployment"></a>
 
-<div align="center">
+<h2 align="center">⚡ 16. ONNX Edge Deployment</h2> <p align="center"><i>How the trained model is packaged for lightweight inference.</i></p>
 
-⚡ 16. ONNX Edge Deployment
+The trained model is converted into Open Neural Network Exchange (ONNX) format.
 
-How the trained model is packaged and executed for lightweight inference.
-
-</div>
-
-Deployment Files
+Files:
 
 NeuroOcularNet.onnx
 NeuroOcularNet.onnx.data
-
-Inference Flow
+The ONNX runtime stage is:
 
 Normalized Feature Vector
           ↓
@@ -1756,242 +1017,141 @@ Prediction Tensor
 Postprocessing
           ↓
 Dashboard Output
+16.1 Why ONNX?
+ONNX provides:
 
-Why ONNX?
-
-portable model format,
+portable model representation,
 
 fast CPU inference,
 
-cross-framework compatibility,
+deployment independence,
 
-compact runtime,
+compatibility with multiple training frameworks,
+
+smaller production runtime,
 
 edge-device suitability.
 
-Target Performance
+16.2 Inference Target
+Prototype target:
 
-Target model inference latency: < 5 ms
-
-Actual latency depends on:
+< 5 ms / inference
+Actual performance depends on:
 
 CPU,
 
-ONNX Runtime build,
+ONNX Runtime version,
 
-thread configuration,
+number of threads,
 
-preprocessing cost,
+preprocessing overhead,
 
-deployment hardware.
+model input size,
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
+deployment platform.
+
+<br>
 
 <a id="17-application-layer"></a>
 
+<h2 align="center">🖥️ 17. Application Layer</h2> <p align="center"><i>How Streamlit exposes the analysis pipeline to the user.</i></p>
+
+The user interface is implemented using:
+
+Streamlit
+The application is responsible for:
+
+loading retinal videos,
+
+displaying frames,
+
+visualizing flow information,
+
+running the feature pipeline,
+
+loading the ONNX model,
+
+displaying glucose estimation,
+
+displaying viscosity estimation,
+
+rendering anomaly alerts,
+
+showing bounding boxes,
+
+showing severity indicators,
+
+presenting clinical-style status cards.
+
+Custom styling is stored in:
+
+style.css
+<br>
+
+<p align="right"><a href="#top">↑ Back to top</a> · <a href="#18-technology-stack">Next chapter →</a></p>
+
 <div align="center">
 
-🖥️ 17. Application Layer
-
-How the analytical pipeline is exposed through the user-facing Streamlit application.
+CHAPTER IV
+🧰 Engineering & Evaluation
+Technology Stack → Repository → Scenarios → Results → Metrics
 
 </div>
-
-Main Responsibilities
-
-The Streamlit application is responsible for:
-
-video upload and loading,
-
-frame preview,
-
-preprocessing execution,
-
-optical-flow processing,
-
-feature extraction,
-
-ONNX model loading,
-
-prediction,
-
-anomaly visualization,
-
-clinical-style output cards.
-
-Interface Files
-
-app.py
-style.css
-
-UI Output Components
-
-Component
-
-Purpose
-
-Video Preview
-
-Display uploaded retinal sequence
-
-Flow Visualization
-
-Show motion / velocity information
-
-Glucose Card
-
-Display model glucose estimate
-
-Viscosity Card
-
-Display inferred viscosity
-
-Anomaly Alert
-
-Highlight abnormal local flow
-
-Bounding Box
-
-Localize the detected region
-
-Severity Indicator
-
-Summarize anomaly magnitude
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
 
 <a id="18-technology-stack"></a>
 
-<div align="center">
+<h2 align="center">🧰 18. Technology Stack</h2> <p align="center"><i>Languages, libraries, runtimes, and mathematical components.</i></p>
 
-🧰 18. Technology Stack
-
-Languages, libraries, runtimes, and mathematical components used by the project.
-
-</div>
-
-Programming
-
-Technology
-
-Role
-
-Python
-
-Main application and analysis language
-
-Computer Vision & Numerical Processing
-
-Technology
-
-Role
-
-OpenCV
-
-Video decoding, preprocessing, optical flow, visualization
-
-NumPy
-
-Numerical operations, arrays, statistics, feature calculation
-
-AI & Inference
-
-Technology
-
-Role
-
-NeuroOcularNet
-
-Physiological regression model
-
-ONNX
-
-Portable model representation
-
-ONNX Runtime
-
-Fast inference engine
-
-Web Layer
-
-Technology
-
-Role
-
-Streamlit
-
-Interactive application
-
-CSS
-
-Visual styling
-
-Mathematical Components
-
-Component
-
-Role
-
-Farneback Optical Flow
-
-Dense motion estimation
-
-Cumulative Motion Mask
-
-Motion ROI
-
-Temporal Baseline
-
-Expected flow behavior
-
-Z-Score
-
-Anomaly detection
-
-Poiseuille Approximation
-
-Idealized flow model
-
-Wall Shear Rate
-
-Hemodynamic descriptor
-
-Non-Newtonian Rheology
-
-Viscosity modeling
-
-MSE
-
-Regression loss
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+Programming Language
+Technology	Role
+Python	Main application and analysis language
+Computer Vision
+Technology	Role
+OpenCV	Video decoding, image processing, optical flow, visualization
+NumPy	Numerical arrays, vectorized flow calculations, statistics
+Machine Learning / Inference
+Technology	Role
+ONNX	Portable serialized neural-network model
+ONNX Runtime	Fast production inference
+NeuroOcularNet	Lightweight physiological regression model
+Web Application
+Technology	Role
+Streamlit	Interactive medical research dashboard
+CSS	Custom UI styling
+Mathematical / Algorithmic Components
+Component	Role
+Farneback Optical Flow	Dense motion estimation
+Cumulative Motion Mask	Dynamic ROI extraction
+Velocity Magnitude	Flow proxy
+Temporal Baseline	Expected local flow
+Z-Score Analysis	Flow anomaly detection
+Nadir Localization	Strongest stagnation point
+Poiseuille Approximation	Idealized flow profile
+Wall Shear Approximation	Hemodynamic feature
+Non-Newtonian Rheology	Viscosity modeling
+MSE	Regression training objective
+<br>
 
 <a id="19-repository-structure"></a>
 
-<div align="center">
-
-📂 19. Repository Structure
-
-How the project files are organized and what each file is responsible for.
-
-</div>
+<h2 align="center">📂 19. Repository Structure</h2> <p align="center"><i>Where each project file lives and what it does.</i></p>
 
 NeuroOcular-AI/
 │
 ├── app.py
 │   ├── Streamlit UI
-│   ├── video loading
+│   ├── video input
 │   ├── preprocessing
-│   ├── optical flow
+│   ├── optical-flow execution
 │   ├── feature extraction
 │   ├── ONNX inference
-│   └── visualization
+│   └── result visualization
 │
 ├── NeuroOcularNet.onnx
-│   └── optimized inference model
+│   └── optimized neural-network graph
 │
 ├── NeuroOcularNet.onnx.data
-│   └── external ONNX tensor data
+│   └── ONNX external tensor data
 │
 ├── requirements.txt
 │   └── project dependencies
@@ -2014,175 +1174,79 @@ NeuroOcular-AI/
 ├── LICENSE
 │
 └── README.md
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="20-sample-clinical-scenarios"></a>
 
-<div align="center">
+<h2 align="center">🎥 20. Sample Clinical Scenarios</h2> <p align="center"><i>The included benchmark scenarios and their intended role.</i></p>
 
-🎥 20. Sample Clinical Scenarios
+The repository contains ten example scenarios.
 
-The benchmark video scenarios included in the current repository.
+File	Scenario	Main Purpose
+01_normal_euglycemic_flow.avi	Normal flow	Baseline reference
+02_mild_hyperglycemia.avi	Mild hyperglycemia	Mild rheological change
+03_acute_hyperglycemia.avi	Acute hyperglycemia	Stronger hemodynamic shift
+04_early_platelet_cluster.avi	Early aggregation	Early localized deceleration
+05_focal_micro_thrombus.avi	Focal micro-thrombus	Local anomaly localization
+06_severe_luminal_stenosis.avi	Severe stenosis	High resistance / reduced flow
+07_pulsatile_shear_stress.avi	Pulsatile flow	Temporal shear analysis
+08_sluggish_microcirculation.avi	Sluggish circulation	General flow reduction
+09_transient_ischemic_event.avi	Transient ischemic event	Temporary anomaly behavior
+10_near_complete_occlusion.avi	Near occlusion	Extreme flow restriction
+These scenarios should be clearly identified as simulation / benchmark scenarios unless acquired from validated clinical datasets.
 
-</div>
-
-File
-
-Scenario
-
-Purpose
-
-01_normal_euglycemic_flow.avi
-
-Normal flow
-
-Baseline
-
-02_mild_hyperglycemia.avi
-
-Mild hyperglycemia
-
-Mild rheological shift
-
-03_acute_hyperglycemia.avi
-
-Acute hyperglycemia
-
-Stronger hemodynamic shift
-
-04_early_platelet_cluster.avi
-
-Early aggregation
-
-Early local deceleration
-
-05_focal_micro_thrombus.avi
-
-Focal micro-thrombus
-
-Local anomaly detection
-
-06_severe_luminal_stenosis.avi
-
-Severe stenosis
-
-High flow restriction
-
-07_pulsatile_shear_stress.avi
-
-Pulsatile flow
-
-Temporal flow analysis
-
-08_sluggish_microcirculation.avi
-
-Sluggish flow
-
-Global reduction
-
-09_transient_ischemic_event.avi
-
-Transient event
-
-Temporary anomaly
-
-10_near_complete_occlusion.avi
-
-Near occlusion
-
-Extreme restriction
-
-These should be labeled as simulation / benchmark scenarios unless they originate from a validated clinical dataset.
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="21-experimental-results"></a>
 
-<div align="center">
+<h2 align="center">📊 21. Experimental Results</h2> <p align="center"><i>Prototype outputs reported during development.</i></p>
 
-📊 21. Experimental Results
+Prototype outputs reported during development include:
 
-Prototype-level outputs reported during development.
-
-</div>
-
-Reported Results
-
-Metric
-
-Prototype Value
-
-Scaled MSE
-
-0.0421
-
-Example viscosity
-
-3.42 – 3.46 mPa·s
-
-Example glucose output
-
-118.3 – 143.8 mg/dL
-
-Example anomaly core
-
-(128, 128)
-
-Example pre-occlusive severity
-
-33%
-
-ONNX model size
-
-10.28 KB
-
-Target model inference
-
-< 5 ms
-
+Metric	Reported Prototype Value
+Scaled MSE	0.0421
+Example viscosity	3.42 – 3.46 mPa·s
+Example glucose output	118.3 – 143.8 mg/dL
+Example anomaly core	(128, 128)
+Example pre-occlusive stage	33%
+ONNX model size	10.28 KB
+Target model inference	< 5 ms
 Interpretation
+These values demonstrate that the computational system can:
 
-These results demonstrate the technical ability of the prototype to:
+process the video,
 
-process retinal video,
+extract a motion field,
 
-estimate optical motion,
+generate hemodynamic features,
 
-derive hemodynamic features,
+execute the regression model,
 
-execute neural inference,
-
-generate numerical outputs,
+generate physiological estimates,
 
 detect spatial flow anomalies,
 
-and localize suspicious regions.
+localize an anomaly,
 
-These values do not establish clinical diagnostic accuracy.
+and run a lightweight inference model.
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
+They do not establish clinical diagnostic accuracy.
+
+<br>
 
 <a id="22-performance-metrics"></a>
 
-<div align="center">
+<h2 align="center">📐 22. Performance Metrics</h2> <p align="center"><i>Metrics needed to evaluate regression and detection performance.</i></p>
 
-📐 22. Performance Metrics
-
-Metrics recommended for future technical and clinical evaluation.
-
-</div>
+For technical evaluation, the project may report:
 
 Regression Metrics
-
 Mean Absolute Error
-
 \frac{1}{N}
 \sum |y_i-\hat{y}_i|
 ]
 
 Root Mean Squared Error
-
 \sqrt{
 \frac{1}{N}
 \sum(y_i-\hat{y}_i)^2
@@ -2190,6 +1254,7 @@ Root Mean Squared Error
 ]
 
 Mean Absolute Relative Difference
+For future glucose validation:
 
 \frac{100}{N}
 \sum
@@ -2203,102 +1268,71 @@ G_i
 ]
 
 Detection Metrics
+For validated anomaly labels:
 
-Recommended metrics include:
+Sensitivity
+Specificity
+Precision
+Recall
+F1-score
+ROC-AUC
+False Positive Rate
+<br>
 
-sensitivity,
-
-specificity,
-
-precision,
-
-recall,
-
-F1-score,
-
-ROC-AUC,
-
-false-positive rate.
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
-
-<a id="23-installation"></a>
+<p align="right"><a href="#top">↑ Back to top</a> · <a href="#23-installation">Next chapter →</a></p>
 
 <div align="center">
 
-💻 23. Installation
-
-Environment setup for local development and testing.
+CHAPTER V
+▶️ Run & Use the Platform
+Install → Run → Deploy → Input → Output
 
 </div>
 
-Requirements
+<a id="23-installation"></a>
 
-Recommended Python versions:
+<h2 align="center">💻 23. Installation</h2> <p align="center"><i>Local environment setup.</i></p>
+
+Requirements
+Recommended:
 
 Python 3.9
 Python 3.10
 Python 3.11
-
-Check your version:
+Check version:
 
 python --version
-
-Clone the Repository
-
+Clone
 git clone https://github.com/yousefosamaahmed/NeuroOcular-AI.git
 cd NeuroOcular-AI
-
-Create a Virtual Environment
-
+Virtual Environment
 Windows
-
 python -m venv .venv
 .venv\Scripts\activate
-
 Linux / macOS
-
 python3 -m venv .venv
 source .venv/bin/activate
-
-Install Dependencies
-
+Install Packages
 pip install --upgrade pip
 pip install -r requirements.txt
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="24-running-the-application"></a>
 
-<div align="center">
-
-▶️ 24. Running the Application
-
-How to start the Streamlit interface locally.
-
-</div>
-
-Run:
+<h2 align="center">▶️ 24. Running the Application</h2> <p align="center"><i>How to launch the Streamlit interface.</i></p>
 
 streamlit run app.py
-
-Typical local address:
+Typical local URL:
 
 http://localhost:8501
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="25-cloud-deployment"></a>
 
-<div align="center">
+<h2 align="center">☁️ 25. Cloud Deployment</h2> <p align="center"><i>How to deploy the project to Streamlit Community Cloud.</i></p>
 
-☁️ 25. Cloud Deployment
-
-How to deploy the application using Streamlit Community Cloud.
-
-</div>
-
-Deployment Settings
+Streamlit Community Cloud
+Deploy with:
 
 Repository:
 yousefosamaahmed/NeuroOcular-AI
@@ -2306,113 +1340,59 @@ yousefosamaahmed/NeuroOcular-AI
 Branch:
 main
 
-Main file:
+Application file:
 app.py
-
-Required Files
+Required deployment files:
 
 app.py
 requirements.txt
 NeuroOcularNet.onnx
 style.css
-
-If required by the exported model:
+If external tensor data is required:
 
 NeuroOcularNet.onnx.data
+must also be deployed.
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="26-input-requirements"></a>
 
-<div align="center">
+<h2 align="center">📥 26. Input Requirements</h2> <p align="center"><i>Recommended properties for retinal video input.</i></p>
 
-📥 26. Input Requirements
+Recommended retinal video properties:
 
-Recommended characteristics for retinal video input.
-
-</div>
-
-Parameter
-
-Recommendation
-
-Format
-
-AVI / MP4
-
-Content
-
-Retinal microvascular video
-
-Frame Rate
-
-Constant
-
-Focus
-
-Sharp vessel structures
-
-Exposure
-
-Stable
-
-Compression
-
-Low / moderate
-
-Eye Motion
-
-Minimal
-
-Camera Motion
-
-Minimal
-
-Duration
-
-Enough frames for temporal baseline
-
-Why Input Quality Matters
-
-Poor acquisition can significantly affect:
-
-optical flow,
-
-vessel motion estimation,
-
-shear-related features,
-
-anomaly maps,
-
-and final model output.
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+Parameter	Recommendation
+File type	AVI / MP4
+Acquisition	Stable retinal microvascular imaging
+Frame rate	Constant
+Exposure	Stable
+Focus	Sharp vessel structures
+Compression	Low / moderate
+Eye movement	Minimal
+Camera movement	Minimal
+Duration	Enough frames to establish temporal baseline
+<br>
 
 <a id="27-output-interpretation"></a>
 
-<div align="center">
-
-📤 27. Output Interpretation
-
-How to read each value produced by the application.
-
-</div>
+<h2 align="center">📤 27. Output Interpretation</h2> <p align="center"><i>How to interpret glucose, viscosity, and anomaly outputs.</i></p>
 
 Glucose Estimate
+Example:
 
 Estimated Glucose
 126 mg/dL
-
 This is a model prediction, not a direct chemical measurement.
 
 Viscosity Estimate
+Example:
 
 Estimated Dynamic Viscosity
 3.44 mPa·s
-
 This is an inferred model output.
 
-Flow Anomaly
+Anomaly Detection
+Example:
 
 Potential Localized Flow Anomaly
 
@@ -2422,42 +1402,46 @@ Y = 128
 
 Estimated Severity:
 33%
+This means the system detected a region of statistically abnormal flow reduction.
 
-This indicates statistically abnormal local flow behavior.
+It does not independently confirm the presence of a thrombus.
 
-It does not independently confirm a thrombus.
+<br>
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
-
-<a id="28-failure-modes--limitations"></a>
+<p align="right"><a href="#top">↑ Back to top</a> · <a href="#28-failure-modes--limitations">Next chapter →</a></p>
 
 <div align="center">
 
-⚠️ 28. Failure Modes & Limitations
-
-The main technical and scientific limitations of the current research prototype.
+CHAPTER VI
+🔬 Validation & Next Steps
+Limitations → Clinical Validation → Future Work → Governance
 
 </div>
 
-28.1 Optical Flow Is Not Direct Blood Velocity
+<a id="28-failure-modes--limitations"></a>
 
+<h2 align="center">⚠️ 28. Failure Modes & Limitations</h2> <p align="center"><i>Where the current prototype can fail or overstate certainty.</i></p>
+
+28.1 Optical Flow Is Not Direct Blood Velocity
 Farneback returns image displacement.
 
-pixel displacement ≠ mm/s
+Without calibration:
 
-Absolute velocity requires:
+pixel displacement ≠ mm/s
+Absolute blood velocity requires:
 
 frame rate,
 
-spatial calibration,
+image scale,
 
 retinal magnification,
 
 vessel geometry.
 
 28.2 Glucose Is Not Uniquely Determined by Flow
+Flow is influenced by multiple confounders:
 
-Microvascular flow is influenced by many confounders:
+glucose,
 
 blood pressure,
 
@@ -2469,68 +1453,75 @@ temperature,
 
 vessel diameter,
 
-autonomic tone,
+vascular tone,
 
-medication,
+medications,
 
-cardiovascular condition,
+cardiovascular status,
 
-retinal disease.
+retinal disease,
 
-28.3 Eye & Camera Motion
+diabetes duration.
 
-Potential artifacts include:
+Therefore the glucose predictor requires clinical calibration.
 
-eye motion,
+28.3 Eye Motion
+Eye motion can create false optical flow.
 
-camera shake,
+Potential improvements include:
 
-blinking,
+global image registration,
 
-focus drift.
+feature-based stabilization,
+
+homography correction,
+
+retinal landmark tracking.
 
 28.4 Illumination Variation
+Brightness changes can mimic motion.
 
-Brightness changes can create false apparent motion.
+Potential countermeasures:
 
-28.5 Incorrect Motion ROI
+histogram normalization,
 
-If nonvascular structures enter the ROI, downstream hemodynamic features may become biased.
+CLAHE,
 
-28.6 Synthetic Data Generalization
+photometric correction,
 
-If training data or benchmark videos are synthetic, performance may not generalize to real patients.
+temporal illumination compensation.
 
-This is one of the most important scientific limitations of the current prototype.
+28.5 Motion Blur
+Blur may reduce vessel-edge quality and corrupt optical-flow estimation.
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
+28.6 Incorrect ROI
+If the cumulative motion mask includes nonvascular motion, all downstream features may be biased.
+
+28.7 Synthetic Data Risk
+If training or benchmark samples are simulated, model performance may not generalize to real patients.
+
+This is one of the most important limitations of the current research stage.
+
+<br>
 
 <a id="29-clinical-validation-roadmap"></a>
 
-<div align="center">
+<h2 align="center">🔬 29. Clinical Validation Roadmap</h2> <p align="center"><i>The staged path from prototype to credible clinical evidence.</i></p>
 
-🔬 29. Clinical Validation Roadmap
-
-The staged pathway required to move from prototype to clinically meaningful evidence.
-
-</div>
-
-Phase 1 — Technical Validation
-
+Phase 1 — Algorithm Validation
 Validate:
 
-optical-flow recovery,
+optical-flow consistency,
 
-synthetic displacement accuracy,
+synthetic displacement recovery,
 
-frame-rate sensitivity,
+noise sensitivity,
 
-noise robustness,
+frame-rate robustness,
 
 motion stabilization.
 
-Phase 2 — Physiological Calibration
-
+Phase 2 — Calibration Study
 Collect synchronized:
 
 Retinal video
@@ -2541,94 +1532,67 @@ Blood pressure
 Heart rate
 Viscosity measurement
 Clinical status
-
 Phase 3 — Prospective Human Study
-
 Evaluate:
 
-MAE,
-
-RMSE,
-
-MARD,
-
-Bland-Altman agreement,
-
-Clarke Error Grid,
-
-Parkes Error Grid,
-
-sensitivity,
-
-specificity,
-
-ROC-AUC.
+MAE
+RMSE
+MARD
+Bland-Altman Agreement
+Clarke Error Grid
+Parkes Error Grid
+Sensitivity
+Specificity
+ROC-AUC
+where appropriate.
 
 Phase 4 — External Validation
+Validate on:
 
-Test across:
+different hospitals,
 
-multiple hospitals,
+different retinal cameras,
 
-multiple retinal cameras,
+different age groups,
 
-age groups,
-
-ethnic groups,
+different ethnicities,
 
 diabetic and non-diabetic cohorts,
 
-vascular comorbidities.
+patients with vascular comorbidities.
 
 Phase 5 — Regulatory Development
+Any clinical product would require a defined intended use, quality-management process, risk analysis, medical-device software lifecycle controls, and the appropriate regulatory pathway for the target jurisdiction.
 
-A clinical product would require:
-
-defined intended use,
-
-quality-management controls,
-
-risk management,
-
-software lifecycle documentation,
-
-appropriate medical-device regulatory review.
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="30-future-development"></a>
 
-<div align="center">
+<h2 align="center">🚀 30. Future Development</h2> <p align="center"><i>Planned technical improvements.</i></p>
 
-🚀 30. Future Development
+Planned improvements may include:
 
-Planned directions for improving vision accuracy, physics fidelity, AI robustness, and deployment.
-
-</div>
-
-Computer Vision
-
+Vision
 retinal vessel segmentation,
 
-U-Net segmentation,
+U-Net vessel masks,
 
 transformer-based segmentation,
 
 image registration,
 
-retinal stabilization,
+optical stabilization,
 
-sub-pixel motion estimation,
+sub-pixel velocity estimation,
 
 deep optical flow.
 
 Hemodynamics
+vessel diameter estimation,
 
-vessel-diameter estimation,
+centerline extraction,
 
-vessel-centerline extraction,
-
-branch-specific flow analysis,
+branch-level velocity analysis,
 
 calibrated absolute velocity,
 
@@ -2637,12 +1601,11 @@ vessel-specific shear estimation,
 pulsatility analysis.
 
 AI
-
 uncertainty-aware regression,
 
 temporal neural networks,
 
-LSTM / GRU modeling,
+LSTM / GRU sequence modeling,
 
 temporal transformers,
 
@@ -2651,50 +1614,42 @@ multimodal fusion,
 patient-specific calibration.
 
 Anomaly Detection
-
 adaptive thresholds,
-
-confidence scoring,
-
-false-positive suppression,
 
 temporal persistence models,
 
-vessel-aware anomaly segmentation.
+segmentation-based anomaly regions,
+
+confidence scoring,
+
+false-positive suppression.
 
 Deployment
-
 mobile inference,
 
-embedded edge devices,
-
-quantized ONNX models,
+embedded edge hardware,
 
 hardware acceleration,
 
-direct camera integration.
+quantized ONNX models,
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
+real-time camera integration.
+
+<br>
 
 <a id="31-security--privacy"></a>
 
-<div align="center">
+<h2 align="center">🔐 31. Security & Privacy</h2> <p align="center"><i>Data-protection requirements for future clinical use.</i></p>
 
-🔐 31. Security & Privacy
+A clinical-grade implementation should include:
 
-Data-protection requirements for any future clinical implementation.
-
-</div>
-
-A production clinical system should include:
-
-patient de-identification,
+anonymization,
 
 encryption at rest,
 
 encryption in transit,
 
-role-based access control,
+access control,
 
 authentication,
 
@@ -2702,69 +1657,52 @@ audit logs,
 
 secure model storage,
 
-retention policies,
+patient consent controls,
 
-consent management.
+retention policies.
 
-Personally identifiable patient data should never be committed to a public repository.
+Never upload personally identifiable patient data to a public GitHub repository.
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="32-intellectual-property"></a>
 
-<div align="center">
+<h2 align="center">⚖️ 32. Intellectual Property</h2> <p align="center"><i>Potentially protectable technical components.</i></p>
 
-⚖️ 32. Intellectual Property
+Potential IP-relevant components may include:
 
-Potentially protectable technical components of the platform.
-
-</div>
-
-Potential IP-relevant areas include:
-
-retinal hemodynamic inference workflow,
+the combined retinal hemodynamic inference pipeline,
 
 physics-informed feature construction,
 
-dual glucose / viscosity regression,
+dual glucose/viscosity regression,
 
-spatio-temporal flow anomaly scoring,
+spatio-temporal pre-occlusive flow scoring,
 
-edge-deployed retinal inference,
+edge-deployed retinal anomaly inference,
 
 real-time microvascular risk visualization.
 
-Patentability or patent status should only be stated after review by a qualified intellectual-property professional.
+Patentability and filing status should only be stated after review by a qualified intellectual-property professional.
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="33-license"></a>
 
-<div align="center">
-
-📜 33. License
-
-Project licensing information.
-
-</div>
+<h2 align="center">📜 33. License</h2> <p align="center"><i>Project licensing information.</i></p>
 
 Distributed under the MIT License unless otherwise specified.
 
 See:
 
 LICENSE
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="34-citation"></a>
 
-<div align="center">
+<h2 align="center">🧾 34. Citation</h2> <p align="center"><i>Suggested academic citation.</i></p>
 
-🧾 34. Citation
-
-Suggested citation for academic or technical use.
-
-</div>
+Suggested repository citation:
 
 @software{neuroocular_ai_2026,
   title  = {NeuroOcular AI: Physics-Informed Retinal Hemodynamics Platform},
@@ -2772,58 +1710,45 @@ Suggested citation for academic or technical use.
   year   = {2026},
   url    = {https://github.com/yousefosamaahmed/NeuroOcular-AI}
 }
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<br>
 
 <a id="35-author"></a>
 
-<div align="center">
-
-👤 35. Author
-
-Project ownership and repository information.
-
-</div>
+<h2 align="center">👤 35. Author</h2> <p align="center"><i>Project ownership and repository information.</i></p>
 
 Yousef Osama Ahmed
-
-Project
+Project:
 
 NeuroOcular AI
 Physics-Informed Retinal Hemodynamics Platform
-
-Repository
+Repository:
 
 https://github.com/yousefosamaahmed/NeuroOcular-AI
+<br>
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
+<h2 align="center">🔍 Technical Summary</h2> <p align="center"><b>End-to-End System at a Glance</b></p>
 
-<div align="center">
-
-🔍 Technical Summary
-
-End-to-End System at a Glance
-
-</div>
+For a reviewer who wants the entire project in one view:
 
 RETINAL VIDEO
     │
-    ├── Preprocessing
+    ├── Frame Acquisition
+    │
+    ├── Image Preprocessing
     │     ├── Intensity Conversion
     │     ├── Denoising
-    │     ├── Normalization
-    │     └── Contrast Enhancement
+    │     └── Normalization
     │
-    ├── Motion ROI
-    │     └── Cumulative Motion Mask
+    ├── Cumulative Motion Mask
     │
     ├── Dense Optical Flow
     │     └── Gunnar Farneback
     │
-    ├── Hemodynamic Feature Engine
+    ├── Velocity Magnitude
+    │
+    ├── Hemodynamic Features
     │     ├── Mean Velocity
-    │     ├── Velocity STD
-    │     ├── Maximum Velocity
+    │     ├── Velocity Variance
     │     ├── Temporal Gradient
     │     ├── Flow Drop
     │     ├── Stagnation Ratio
@@ -2832,8 +1757,7 @@ RETINAL VIDEO
     │
     ├── Physics Layer
     │     ├── Poiseuille Approximation
-    │     ├── Wall Shear Rate
-    │     ├── Shear Stress
+    │     ├── Wall Shear Approximation
     │     └── Non-Newtonian Rheology
     │
     ├── AI Layer
@@ -2848,20 +1772,16 @@ RETINAL VIDEO
     ├── Anomaly Layer
     │     ├── Temporal Baseline
     │     ├── Standard Deviation Map
-    │     ├── Z-Score
-    │     ├── Persistence Logic
-    │     ├── Nadir Detection
+    │     ├── Spatial-Temporal Z-Score
+    │     ├── Local Nadir Detection
     │     ├── Bounding Box
-    │     └── Severity Score
+    │     └── Severity Estimation
     │
     └── Streamlit Dashboard
-
 <div align="center">
 
 🩺 NeuroOcular AI
+Physics-Informed Retinal Hemodynamics
+Computer Vision • Biofluid Mechanics • Machine Learning • Edge AI
 
-Computer Vision • Hemodynamics • Physics-Informed AI • Edge Deployment
-
-Research prototype for next-generation retinal microvascular analysis.
-
-</div>
+Research prototype for next-generation non-invasive microvascular analysis.
