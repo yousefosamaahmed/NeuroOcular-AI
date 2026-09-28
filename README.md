@@ -1,6 +1,6 @@
-🩺 NeuroOcular AI
+<p align="center">## 🩺 NeuroOcular AI</p>
 
-Physics-Informed Retinal Hemodynamics Platform
+<p align="center">### Physics-Informed Retinal Hemodynamics Platform</p>
 
 <p align="center">
   <b>Retinal Computer Vision × Hemodynamics × Physics-Informed AI × Edge Inference</b>
@@ -18,101 +18,154 @@ Physics-Informed Retinal Hemodynamics Platform
 
 NeuroOcular AI is a research-oriented medical computer vision platform that analyzes retinal microvascular video to extract flow-related biomarkers, estimate physiological variables, and detect localized pre-occlusive flow abnormalities using a combination of dense optical flow, hemodynamic modeling, spatio-temporal anomaly detection, and lightweight ONNX inference.
 
-⚠️ Medical & Research Disclaimer
+<br>
 
-NeuroOcular AI is an experimental research prototype.
+<h2 align="center">⚠️ Medical & Research Disclaimer</h2>
+<p align="center"><b>Research Use Only • Not a Clinically Validated Medical Device</b></p>
 
-It is not a clinically validated medical device and must not be used as a substitute for:
+NeuroOcular AI is an experimental research prototype intended for academic research, engineering validation, and technical demonstration.
 
-laboratory blood glucose measurement,
+It must not be used as a substitute for:
 
-certified continuous glucose monitoring,
+Laboratory blood glucose measurement
 
-vascular imaging,
+Certified continuous glucose monitoring
 
-physician diagnosis,
+Vascular imaging
 
-emergency assessment,
+Physician diagnosis
 
-anticoagulation decisions,
+Emergency medical assessment
 
-or any other medical treatment decision.
+Anticoagulation decisions
 
-The current system demonstrates a computational research pipeline. Clinical deployment would require prospective human studies, synchronized ground-truth measurements, independent external validation, safety testing, demographic robustness evaluation, and regulatory approval.
+Any other treatment or clinical decision
 
-📑 Table of Contents
+Clinical Translation Requirement:
+A deployable clinical system would require prospective human studies, synchronized ground-truth measurements, independent external validation, safety testing, demographic robustness evaluation, and appropriate regulatory approval.
 
-Project Summary
+<br>
 
-Clinical & Engineering Motivation
+<h2 align="center">📑 Table of Contents</h2>
+<p align="center"><b>Complete Technical Documentation</b></p>
 
-Research Hypothesis
+Core System
 
-Project Objectives
+Algorithms & AI
 
-What the System Does
-
-End-to-End Architecture
-
-Complete Algorithm Inventory
-
-Computer Vision Pipeline
-
-Retinal Motion & Velocimetry
-
-Hemodynamic Feature Engineering
-
-Biophysical & Rheological Modeling
-
-Spatio-Temporal Anomaly Detection
-
-AI Model: NeuroOcularNet
-
-Model Inputs & Outputs
-
-Training & Normalization Pipeline
-
-ONNX Edge Deployment
-
-Application Layer
-
-Technology Stack
-
-Repository Structure
-
-Sample Clinical Scenarios
-
-Experimental Results
-
-Performance Metrics
-
-Installation
-
-Running the Application
-
-Cloud Deployment
-
-Input Requirements
-
-Output Interpretation
-
-Failure Modes & Limitations
-
-Clinical Validation Roadmap
-
-Future Development
-
-Security & Privacy
-
-Intellectual Property
-
-License
-
-Citation
-
-Author
+Engineering & Validation
 
 1. Project Summary
+
+7. Complete Algorithm Inventory
+
+18. Technology Stack
+
+2. Clinical & Engineering Motivation
+
+8. Computer Vision Pipeline
+
+19. Repository Structure
+
+3. Research Hypothesis
+
+9. Retinal Motion & Velocimetry
+
+20. Sample Clinical Scenarios
+
+4. Project Objectives
+
+10. Hemodynamic Feature Engineering
+
+21. Experimental Results
+
+5. What the System Does
+
+11. Biophysical & Rheological Modeling
+
+22. Performance Metrics
+
+6. End-to-End Architecture
+
+12. Spatio-Temporal Anomaly Detection
+
+23. Installation
+
+
+
+13. AI Model: NeuroOcularNet
+
+24. Running the Application
+
+
+
+14. Model Inputs & Outputs
+
+25. Cloud Deployment
+
+
+
+15. Training & Normalization Pipeline
+
+26. Input Requirements
+
+
+
+16. ONNX Edge Deployment
+
+27. Output Interpretation
+
+
+
+17. Application Layer
+
+28. Failure Modes & Limitations
+
+
+
+
+
+29. Clinical Validation Roadmap
+
+
+
+
+
+30. Future Development
+
+
+
+
+
+31. Security & Privacy
+
+
+
+
+
+32. Intellectual Property
+
+
+
+
+
+33. License
+
+
+
+
+
+34. Citation
+
+
+
+
+
+35. Author
+
+<br>
+
+<h2 align="center">📌 1. Project Summary</h2>
 
 NeuroOcular AI converts a retinal microvascular video sequence into a structured hemodynamic analysis pipeline.
 
@@ -150,7 +203,9 @@ D. Pre-Occlusive Flow Anomaly Detection
 
 Detects and localizes persistent regions of abnormal flow reduction that may represent a pre-occlusive microvascular event.
 
-2. Clinical & Engineering Motivation
+<br>
+
+<h2 align="center">🎯 2. Clinical & Engineering Motivation</h2>
 
 2.1 Glucose Monitoring
 
@@ -176,7 +231,9 @@ Can persistent localized flow deceleration be detected before complete microvasc
 
 The system therefore analyzes dynamic flow behavior, rather than searching only for a visible static clot.
 
-3. Research Hypothesis
+<br>
+
+<h2 align="center">🧪 3. Research Hypothesis</h2>
 
 The project is built around three linked hypotheses.
 
@@ -216,7 +273,9 @@ and persistent local stagnation
 
 before total lumen occlusion.
 
-4. Project Objectives
+<br>
+
+<h2 align="center">✅ 4. Project Objectives</h2>
 
 The technical objectives are:
 
@@ -248,7 +307,9 @@ Deploy the learned predictor through ONNX Runtime.
 
 Keep inference lightweight enough for edge deployment.
 
-5. What the System Does
+<br>
+
+<h2 align="center">⚙️ 5. What the System Does</h2>
 
 INPUT
   ↓
@@ -272,7 +333,9 @@ Physics-Informed Predictor           Temporal Anomaly Engine
 └─ Hemodynamic Indicators                  ├─ Anomaly Core
                                            └─ Severity Estimate
 
-6. End-to-End Architecture
+<br>
+
+<h2 align="center">🏗️ 6. End-to-End Architecture</h2>
 
 flowchart TD
 
@@ -321,7 +384,9 @@ flowchart TD
     R --> T
     S --> T
 
-7. Complete Algorithm Inventory
+<br>
+
+<h2 align="center">🧠 7. Complete Algorithm Inventory</h2>
 
 This section documents the core algorithms used by the project.
 
@@ -577,7 +642,9 @@ Anomaly metrics
 
 Severity value
 
-8. Computer Vision Pipeline
+<br>
+
+<h2 align="center">👁️ 8. Computer Vision Pipeline</h2>
 
 8.1 Video Frame Acquisition
 
@@ -626,7 +693,9 @@ Contrast Enhancement
 
 Used when vessel boundaries or intravascular intensity patterns have insufficient local contrast.
 
-9. Retinal Motion & Velocimetry
+<br>
+
+<h2 align="center">🎞️ 9. Retinal Motion & Velocimetry</h2>
 
 9.1 Cumulative Motion Mask
 
@@ -750,7 +819,9 @@ v_{px/s}\times C
 
 Without this calibration, the system must not report optical-flow magnitude as true physical blood velocity.
 
-10. Hemodynamic Feature Engineering
+<br>
+
+<h2 align="center">📈 10. Hemodynamic Feature Engineering</h2>
 
 The optical-flow field is transformed into a compact feature vector.
 
@@ -839,7 +910,9 @@ v_{mean}+\epsilon
 
 This can characterize temporal flow variation.
 
-11. Biophysical & Rheological Modeling
+<br>
+
+<h2 align="center">🩸 11. Biophysical & Rheological Modeling</h2>
 
 11.1 Poiseuille-Type Velocity Profile
 
@@ -961,7 +1034,9 @@ glucose-related physiological term
 
 The glucose-to-rheology relationship must be calibrated empirically using paired physiological measurements.
 
-12. Spatio-Temporal Anomaly Detection
+<br>
+
+<h2 align="center">🚨 12. Spatio-Temporal Anomaly Detection</h2>
 
 The anomaly subsystem operates independently from the physiological regression output.
 
@@ -1040,7 +1115,9 @@ Z(x,y,t)>\tau_Z
 
 Persistent anomalies are more important than isolated spikes.
 
-13. AI Model: NeuroOcularNet
+<br>
+
+<h2 align="center">🤖 13. AI Model: NeuroOcularNet</h2>
 
 The learned prediction component is exported as:
 
@@ -1111,7 +1188,9 @@ reduced computational requirements,
 
 easier integration into a real-time dashboard.
 
-14. Model Inputs & Outputs
+<br>
+
+<h2 align="center">🔢 14. Model Inputs & Outputs</h2>
 
 14.1 Candidate Input Feature Vector
 
@@ -1137,7 +1216,9 @@ The model produces physiological estimates such as:
 Output 1 → Estimated Blood Glucose (mg/dL)
 Output 2 → Estimated Dynamic Viscosity (mPa·s)
 
-15. Training & Normalization Pipeline
+<br>
+
+<h2 align="center">🧬 15. Training & Normalization Pipeline</h2>
 
 A typical training flow is:
 
@@ -1190,7 +1271,9 @@ Prototype reported scaled MSE:
 
 This value should be interpreted in the context of the normalization and target scaling used during training.
 
-16. ONNX Edge Deployment
+<br>
+
+<h2 align="center">⚡ 16. ONNX Edge Deployment</h2>
 
 The trained model is converted into Open Neural Network Exchange (ONNX) format.
 
@@ -1249,7 +1332,9 @@ model input size,
 
 deployment platform.
 
-17. Application Layer
+<br>
+
+<h2 align="center">🖥️ 17. Application Layer</h2>
 
 The user interface is implemented using:
 
@@ -1283,7 +1368,9 @@ Custom styling is stored in:
 
 style.css
 
-18. Technology Stack
+<br>
+
+<h2 align="center">🧰 18. Technology Stack</h2>
 
 Programming Language
 
@@ -1387,7 +1474,9 @@ MSE
 
 Regression training objective
 
-19. Repository Structure
+<br>
+
+<h2 align="center">📂 19. Repository Structure</h2>
 
 NeuroOcular-AI/
 │
@@ -1428,7 +1517,9 @@ NeuroOcular-AI/
 │
 └── README.md
 
-20. Sample Clinical Scenarios
+<br>
+
+<h2 align="center">🎥 20. Sample Clinical Scenarios</h2>
 
 The repository contains ten example scenarios.
 
@@ -1500,7 +1591,9 @@ Extreme flow restriction
 
 These scenarios should be clearly identified as simulation / benchmark scenarios unless acquired from validated clinical datasets.
 
-21. Experimental Results
+<br>
+
+<h2 align="center">📊 21. Experimental Results</h2>
 
 Prototype outputs reported during development include:
 
@@ -1558,7 +1651,9 @@ and run a lightweight inference model.
 
 They do not establish clinical diagnostic accuracy.
 
-22. Performance Metrics
+<br>
+
+<h2 align="center">📐 22. Performance Metrics</h2>
 
 For technical evaluation, the project may report:
 
@@ -1605,7 +1700,9 @@ F1-score
 ROC-AUC
 False Positive Rate
 
-23. Installation
+<br>
+
+<h2 align="center">💻 23. Installation</h2>
 
 Requirements
 
@@ -1641,7 +1738,9 @@ Install Packages
 pip install --upgrade pip
 pip install -r requirements.txt
 
-24. Running the Application
+<br>
+
+<h2 align="center">▶️ 24. Running the Application</h2>
 
 streamlit run app.py
 
@@ -1649,7 +1748,9 @@ Typical local URL:
 
 http://localhost:8501
 
-25. Cloud Deployment
+<br>
+
+<h2 align="center">☁️ 25. Cloud Deployment</h2>
 
 Streamlit Community Cloud
 
@@ -1677,7 +1778,9 @@ NeuroOcularNet.onnx.data
 
 must also be deployed.
 
-26. Input Requirements
+<br>
+
+<h2 align="center">📥 26. Input Requirements</h2>
 
 Recommended retinal video properties:
 
@@ -1721,7 +1824,9 @@ Duration
 
 Enough frames to establish temporal baseline
 
-27. Output Interpretation
+<br>
+
+<h2 align="center">📤 27. Output Interpretation</h2>
 
 Glucose Estimate
 
@@ -1758,7 +1863,9 @@ This means the system detected a region of statistically abnormal flow reduction
 
 It does not independently confirm the presence of a thrombus.
 
-28. Failure Modes & Limitations
+<br>
+
+<h2 align="center">⚠️ 28. Failure Modes & Limitations</h2>
 
 28.1 Optical Flow Is Not Direct Blood Velocity
 
@@ -1848,7 +1955,9 @@ If training or benchmark samples are simulated, model performance may not genera
 
 This is one of the most important limitations of the current research stage.
 
-29. Clinical Validation Roadmap
+<br>
+
+<h2 align="center">🔬 29. Clinical Validation Roadmap</h2>
 
 Phase 1 — Algorithm Validation
 
@@ -1913,7 +2022,9 @@ Phase 5 — Regulatory Development
 
 Any clinical product would require a defined intended use, quality-management process, risk analysis, medical-device software lifecycle controls, and the appropriate regulatory pathway for the target jurisdiction.
 
-30. Future Development
+<br>
+
+<h2 align="center">🚀 30. Future Development</h2>
 
 Planned improvements may include:
 
@@ -1985,7 +2096,9 @@ quantized ONNX models,
 
 real-time camera integration.
 
-31. Security & Privacy
+<br>
+
+<h2 align="center">🔐 31. Security & Privacy</h2>
 
 A clinical-grade implementation should include:
 
@@ -2009,7 +2122,9 @@ retention policies.
 
 Never upload personally identifiable patient data to a public GitHub repository.
 
-32. Intellectual Property
+<br>
+
+<h2 align="center">⚖️ 32. Intellectual Property</h2>
 
 Potential IP-relevant components may include:
 
@@ -2027,7 +2142,9 @@ real-time microvascular risk visualization.
 
 Patentability and filing status should only be stated after review by a qualified intellectual-property professional.
 
-33. License
+<br>
+
+<h2 align="center">📜 33. License</h2>
 
 Distributed under the MIT License unless otherwise specified.
 
@@ -2035,7 +2152,9 @@ See:
 
 LICENSE
 
-34. Citation
+<br>
+
+<h2 align="center">🧾 34. Citation</h2>
 
 Suggested repository citation:
 
@@ -2046,7 +2165,9 @@ Suggested repository citation:
   url    = {https://github.com/yousefosamaahmed/NeuroOcular-AI}
 }
 
-35. Author
+<br>
+
+<h2 align="center">👤 35. Author</h2>
 
 Yousef Osama Ahmed
 
@@ -2059,7 +2180,10 @@ Repository:
 
 https://github.com/yousefosamaahmed/NeuroOcular-AI
 
-🔍 Technical Summary
+<br>
+
+<h2 align="center">🔍 Technical Summary</h2>
+<p align="center"><b>End-to-End System at a Glance</b></p>
 
 For a reviewer who wants the entire project in one view:
 
