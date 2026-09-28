@@ -736,15 +736,15 @@ Severity value
 
 Purpose: The video is decomposed into a sequence:
 
-$$
-I_1,; I_2,; I_3,; \dots,; I_T
+[
+I_1, I_2, I_3, \dots, I_T
+]
 
-$$
 Where:
 
-$I_t$ is the frame at time $t$
+(I_t) is the frame at time (t)
 
-$T$ is the total number of frames.
+(T) is the total number of frames.
 
 8.2 Frame Preprocessing
 
@@ -773,8 +773,7 @@ Purpose: Reduces sensitivity to global brightness changes.
 Conceptually:
 
 \frac{I-\mu_I}{\sigma_I+\epsilon}
-
-$$
+]
 
 Contrast Enhancement
 
@@ -793,22 +792,22 @@ Purpose: A cumulative motion representation identifies pixels that repeatedly ex
 
 Conceptual formulation:
 
-\left| I_t(x,y)-I_{t-1}(x,y) \right|
+|I_t(x,y)-I_{t-1}(x,y)|
+]
 
-$$
 Cumulative formulation:
 
 \sum_{t=2}^{T} M_t(x,y)
+]
 
-$$
 ROI thresholding:
 
 \begin{cases}
-1, & M_{\mathrm{cum}}(x,y) > \tau_m \
-0, & \text{otherwise}
+1 & M_{cum}(x,y) > \tau_m \
+0 & \text{otherwise}
 \end{cases}
+]
 
-$$
 This suppresses static retinal structures and focuses processing on dynamically changing regions.
 
 9.2 Farneback Dense Optical Flow
@@ -819,20 +818,20 @@ Unlike sparse tracking methods, Farneback estimates a motion vector for a large 
 
 Flow field:
 
-\bigl(u(x,y),,v(x,y)\bigr)
+(u(x,y), v(x,y))
+]
 
-$$
 Where:
 
-$u(x,y)$ = horizontal displacement
+(u(x,y)) = horizontal displacement
 
-$v(x,y)$ = vertical displacement.
+(v(x,y)) = vertical displacement.
 
 Flow magnitude:
 
-\sqrt{u(x,y)^2 + v(x,y)^2}
+\sqrt{u(x,y)^2+v(x,y)^2}
+]
 
-$$
 This magnitude is treated as an image-space proxy for local motion velocity.
 
 Why Farneback?
@@ -883,29 +882,30 @@ Tuning Note: The exact values should be tuned against the retinal acquisition se
 
 Purpose: If optical flow displacement is measured in:
 
-pixels / frame
+**`pixels / frame`**
 
 then image-space velocity can be converted to:
 
-pixels / second
+**`pixels / second`**
 
 using:
 
-v_{\mathrm{px/frame}} \times \mathrm{FPS}
+v_{px/frame}\times FPS
+]
 
-$$
 Absolute physiological velocity requires spatial calibration.
 
 If the calibration factor is:
 
-\frac{\mu\mathrm{m}}{\mathrm{pixel}}
+[
+C = \frac{\mu m}{pixel}
+]
 
-$$
 then:
 
-v_{\mathrm{px/s}} \times C
+v_{px/s}\times C
+]
 
-$$
 Without this calibration, the system must not report optical-flow magnitude as true physical blood velocity.
 
 <br>
@@ -920,9 +920,9 @@ Overview: The optical-flow field is transformed into a compact feature vector.
 10.1 Mean Flow Velocity
 
 \frac{1}{N}
-\sum_{i=1}^{N} v_i
+\sum_{i=1}^{N}v_i
+]
 
-$$
 Represents average motion inside the selected vascular ROI.
 
 10.2 Velocity Standard Deviation
@@ -930,35 +930,35 @@ Represents average motion inside the selected vascular ROI.
 \sqrt{
 \frac{1}{N}
 \sum_{i=1}^{N}
-\left(v_i-\bar{v}\right)^2
+(v_i-\bar{v})^2
 }
+]
 
-$$
 Measures flow heterogeneity.
 
 10.3 Maximum Local Velocity
 
-\max\left(v_1,\dots,v_N\right)
+\max(v_1,\dots,v_N)
+]
 
-$$
 Useful for identifying the fastest local motion region.
 
 10.4 Temporal Velocity Gradient
 
 v_t-v_{t-1}
+]
 
-$$
 Captures acceleration or deceleration over time.
 
 10.5 Relative Flow Drop
 
 \frac{
-v_{\mathrm{baseline}}-v_{\mathrm{current}}
+v_{baseline}-v_{current}
 }{
-v_{\mathrm{baseline}}+\epsilon
+v_{baseline}+\epsilon
 }
+]
 
-$$
 A high value indicates substantial local deceleration.
 
 10.6 Stagnation Ratio
@@ -966,27 +966,27 @@ A high value indicates substantial local deceleration.
 Metric: One useful implementation is:
 
 \frac{
-N!\left(v<\tau_s\right)
+N(v<\tau_s)
 }{
-N_{\mathrm{ROI}}
+N_{ROI}
 }
+]
 
-$$
 Where:
 
-$\tau_s$ = low-flow threshold
+(\tau_s) = low-flow threshold
 
-$N(v<\tau_s)$ = number of low-flow pixels.
+(N(v<\tau_s)) = number of low-flow pixels.
 
 10.7 Vessel / Motion Occupancy
 
 \frac{
-N_{\mathrm{active}}
+N_{active}
 }{
-N_{\mathrm{image}}
+N_{image}
 }
+]
 
-$$
 Describes how much of the analyzed region contains significant motion.
 
 10.8 Pulsatility-Related Index
@@ -994,12 +994,12 @@ Describes how much of the analyzed region contains significant motion.
 Metric: If a temporal waveform is available:
 
 \frac{
-v_{\max}-v_{\min}
+v_{max}-v_{min}
 }{
-v_{\mathrm{mean}}+\epsilon
+v_{mean}+\epsilon
 }
+]
 
-$$
 This can characterize temporal flow variation.
 
 <br>
@@ -1013,19 +1013,19 @@ This can characterize temporal flow variation.
 
 Model: A simplified laminar flow profile can be represented as:
 
-v_{\max}
+v_{max}
 \left(
 1-\frac{r^2}{R^2}
 \right)
+]
 
-$$
 Where:
 
-$r$ = radial distance from vessel center
+(r) = radial distance from vessel center
 
-$R$ = vessel radius
+(R) = vessel radius
 
-$v_{max}$ = centerline velocity.
+(v_{max}) = centerline velocity.
 
 Important Note
 
@@ -1050,81 +1050,80 @@ Metric: The general expression is:
 \left.
 \frac{\partial v}{\partial r}
 \right|_{r=R}
+]
 
-$$
 For simplified laminar flow:
 
-$$
-\dot{\gamma}_{\mathrm{wall}}
+[
+\dot{\gamma}_{wall}
 \approx
 \frac{4\bar{v}}{R}
-
-$$
+]
 
 11.3 Shear Stress
 
 Metric: If viscosity is available:
 
-\eta,\dot{\gamma}
+\eta\dot{\gamma}
+]
 
-$$
 Where:
 
-$\tau$ = shear stress
+(\tau) = shear stress
 
-$\eta$ = apparent viscosity
+(\eta) = apparent viscosity
 
-$\dot{\gamma}$ = shear rate.
+(\dot{\gamma}) = shear rate.
 
 11.4 Non-Newtonian Viscosity Model
 
 Model: A generalized Carreau-Yasuda-style formulation can be written as:
 
-\eta_{\infty}
+\eta_\infty
 +
+\left(
+\eta_0(G)-\eta_\infty
+\right)
 \left[
-\eta_0(G)-\eta_{\infty}
-\right]
-\left[
-1+\left(\lambda\dot{\gamma}\right)^a
+1+(\lambda\dot{\gamma})^a
 \right]^{\frac{n-1}{a}}
+]
 
-$$
 Where:
 
 Symbol
 
 Meaning
 
-$\eta$
+(\eta)
 
 apparent dynamic viscosity
 
-$\eta_0$
+(\eta_0)
 
 low-shear viscosity
 
-$\eta_\infty$
+(\eta_\infty)
 
 high-shear limiting viscosity
 
-$\dot{\gamma}$
+(\dot{\gamma})
 
 shear rate
 
-$\lambda$
+(\lambda)
 
 time constant
 
-$a$
+(a)
 
 transition parameter
 
-$n$
+(n)
 
 flow behavior index
 
-$G$
+(G)
 
 glucose-related physiological term
 
@@ -1146,32 +1145,30 @@ Purpose: For each pixel or vascular region:
 \frac{1}{T_b}
 \sum_{t=1}^{T_b}
 v(x,y,t)
-
-$$
+]
 
 12.2 Local Temporal Variance
 
 \sqrt{
 \frac{1}{T_b}
-\sum_{t=1}^{T_b}
-\left[
-v(x,y,t)-\bar{v}_{\mathrm{baseline}}(x,y)
-\right]^2
+\sum
+\left(
+v(x,y,t)-\bar{v}_{baseline}(x,y)
+\right)^2
 }
-
-$$
+]
 
 12.3 Spatio-Temporal Z-Score
 
 Purpose: The anomaly score is:
 
 \frac{
-\bar{v}_{\mathrm{baseline}}(x,y)-v(x,y,t)
+\bar{v}_{baseline}(x,y)-v(x,y,t)
 }{
 \sigma_v(x,y)+\epsilon
 }
+]
 
-$$
 Interpretation:
 
 Low Z-score
@@ -1186,10 +1183,9 @@ Current flow is substantially lower than baseline
 
 Purpose: The strongest local deceleration region can be estimated from:
 
-\operatorname*{arg,max}_{x,y}
-Z(x,y,t)
+\arg\max_{x,y} Z(x,y,t)
+]
 
-$$
 or equivalently from the local minimum velocity.
 
 The system can then generate:
@@ -1209,12 +1205,12 @@ Purpose: A single abnormal frame should not automatically represent a thrombotic
 A more reliable decision rule includes temporal persistence:
 
 \sum_{t=t_0}^{t_1}
-\mathbf{1}
+\mathbb{1}
 \left[
 Z(x,y,t)>\tau_Z
 \right]
+]
 
-$$
 Persistent anomalies are more important than isolated spikes.
 
 <br>
@@ -1240,7 +1236,7 @@ Feature Vector → NeuroOcularNet → Training → ONNX → Application
 
 Overview: The learned prediction component is exported as:
 
-NeuroOcularNet.onnx
+**`NeuroOcularNet.onnx`**
 
 Current model footprint:
 
@@ -1271,25 +1267,25 @@ Conceptually:
 [
 x_1,x_2,\dots,x_n
 ]
+]
 
-$$
 and:
 
 [
 \hat{G},
 \hat{\eta}
 ]
+]
 
-$$
 Where:
 
-$\mathbf{x}$ = normalized hemodynamic feature vector
+(\mathbf{x}) = normalized hemodynamic feature vector
 
-$\hat{G}$ = estimated glucose
+(\hat{G}) = estimated glucose
 
-$\hat{\eta}$ = estimated viscosity
+(\hat{\eta}) = estimated viscosity
 
-$\theta$ = learned network parameters.
+(\theta) = learned network parameters.
 
 13.2 Why a Small Neural Network?
 
@@ -1369,16 +1365,16 @@ ONNX Export
 
 15.1 Normalization
 
-Purpose: For a feature $x$:
+Purpose: For a feature (x):
 
 \frac{x-\mu_x}{\sigma_x+\epsilon}
+]
 
-$$
 or using min-max scaling:
 
 \frac{x-x_{min}}{x_{max}-x_{min}}
+]
 
-$$
 The same training normalization parameters must be reused during inference.
 
 15.2 Regression Loss
@@ -1388,11 +1384,11 @@ Training Metric: The reported model convergence uses Mean Squared Error.
 \frac{1}{N}
 \sum_{i=1}^{N}
 (y_i-\hat{y}_i)^2
+]
 
-$$
 Prototype reported scaled MSE:
 
-0.0421
+**`0.0421`**
 
 This value should be interpreted in the context of the normalization and target scaling used during training.
 
@@ -1444,7 +1440,7 @@ edge-device suitability.
 
 Target: Prototype target:
 
-< 5 ms / inference
+**`< 5 ms / inference`**
 
 Runtime depends on:
 
@@ -1469,7 +1465,7 @@ deployment platform.
 
 Overview: The user interface is implemented using:
 
-Streamlit
+**`Streamlit`**
 
 The application is responsible for:
 
@@ -1497,7 +1493,7 @@ presenting clinical-style status cards.
 
 Custom styling is stored in:
 
-style.css
+**`style.css`**
 
 <br>
 
@@ -1823,8 +1819,7 @@ Mean Absolute Error
 
 \frac{1}{N}
 \sum |y_i-\hat{y}_i|
-
-$$
+]
 
 Root Mean Squared Error
 
@@ -1832,8 +1827,7 @@ Root Mean Squared Error
 \frac{1}{N}
 \sum(y_i-\hat{y}_i)^2
 }
-
-$$
+]
 
 Mean Absolute Relative Difference
 
@@ -1848,8 +1842,7 @@ G_i-\hat{G}_i
 G_i
 }
 \right|
-
-$$
+]
 
 Detection Metrics
 
@@ -1929,7 +1922,7 @@ streamlit run app.py
 
 Typical local URL:
 
-http://localhost:8501
+**`http://localhost:8501`**
 
 <br>
 
@@ -1960,7 +1953,7 @@ requirements.txt
 
 If external tensor data is required:
 
-NeuroOcularNet.onnx.data
+**`NeuroOcularNet.onnx.data`**
 
 must also be deployed.
 
