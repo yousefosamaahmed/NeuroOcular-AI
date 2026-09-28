@@ -1,6 +1,6 @@
-<p align="center">## 🩺 NeuroOcular AI</p>
+<p align="center"> 🩺 NeuroOcular AI</p>
 
-<p align="center">### Physics-Informed Retinal Hemodynamics Platform</p>
+<p align="center"> Physics-Informed Retinal Hemodynamics Platform</p>
 
 <p align="center">
   <b>Retinal Computer Vision × Hemodynamics × Physics-Informed AI × Edge Inference</b>
